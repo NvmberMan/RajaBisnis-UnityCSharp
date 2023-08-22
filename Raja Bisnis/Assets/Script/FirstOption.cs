@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Animations;
 
 public class FirstOption : MonoBehaviour
 {
@@ -14,15 +15,22 @@ public class FirstOption : MonoBehaviour
     public Button drink;
     public Button fashion;
 
+    [Header("animation")]
+    Animator animation;
+
+
+    int id;
 
     public void YesTutorialChoice()
     {
         ShowOption();
+        id = 1;
         print("Follow The Tuttorial");
     }
     public void NoTutorialChoice()
     {
         ShowOption();
+        id = 0;
         print("Pick The Option");
     }
 
@@ -31,14 +39,17 @@ public class FirstOption : MonoBehaviour
         if(type == food)
         {
             print("I pick food");
+            pick.gameObject.SetActive(false);
         }
         else if(type == drink)
         {
             print("I pick drink");
+            pick.gameObject.SetActive(false);
         }
         else if(type == fashion)
         {
             print("I pick fashion");
+            pick.gameObject.SetActive(false);
         }
     }
 
