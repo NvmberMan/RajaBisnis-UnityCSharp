@@ -24,15 +24,17 @@ public class NpcSpawner : MonoBehaviour
         int randomDirection = Random.Range(0, 100);
 
 
-        Transform npcContainer = gm.npcLeftPoint.parent;
         Transform npcSpawnPoint = randomDirection > 50 ? gm.npcLeftPoint : gm.npcRightPoint;
 
-        Npc npc = Instantiate(gm.npcPrefabs[Random.Range(0,gm.npcPrefabs.Count)], npcSpawnPoint.position, Quaternion.identity, npcContainer);
+        Npc npc = Instantiate(gm.npcPrefabs[Random.Range(0,gm.npcPrefabs.Count)], npcSpawnPoint.position, Quaternion.identity, npcSpawnPoint);
 
         if(randomDirection > 50)
         {
             npc.walkingDirection = Vector2.right;
-        }else
+            npc.transform.localScale = new Vector2(-npc.transform.localScale.x, npc.transform.localScale.y);
+
+        }
+        else
         {
             npc.walkingDirection = Vector2.left;
         }

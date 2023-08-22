@@ -12,17 +12,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: FemaleNpc
       objectReference: {fileID: 0}
+    - target: {fileID: 2416752402753610503, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 164.0532
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416752402753610503, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160.8827
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416752402753610503, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416752402753610503, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 70.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244082322368478339, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cfd1b056adeee7c47a0fe2aef1dc8305, type: 3}
     - target: {fileID: 7244082322368478339, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7244082322368478339, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
       propertyPath: m_Color.g
-      value: 0.23810148
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7244082322368478339, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7553010200190759545, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
       propertyPath: m_Pivot.x
