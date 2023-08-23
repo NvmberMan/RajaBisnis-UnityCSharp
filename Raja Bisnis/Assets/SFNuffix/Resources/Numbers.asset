@@ -1,0 +1,321 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9efef5622ff214ca1313e2c4b50b4a, type: 3}
+  m_Name: Numbers
+  m_EditorClassIdentifier: 
+  numberSuffixes:
+  - Suffix: Thousand
+    SuffixAbbreviation: K
+    PowerOfTen: 3
+  - Suffix: Million
+    SuffixAbbreviation: M
+    PowerOfTen: 6
+  - Suffix: Billion
+    SuffixAbbreviation: B
+    PowerOfTen: 9
+  - Suffix: Trillion
+    SuffixAbbreviation: T
+    PowerOfTen: 12
+  - Suffix: Quadrillion
+    SuffixAbbreviation: Qa
+    PowerOfTen: 15
+  - Suffix: Quintillion
+    SuffixAbbreviation: Qi
+    PowerOfTen: 18
+  - Suffix: Sextillion
+    SuffixAbbreviation: Sx
+    PowerOfTen: 21
+  - Suffix: Septillion
+    SuffixAbbreviation: Sp
+    PowerOfTen: 24
+  - Suffix: Octillion
+    SuffixAbbreviation: Oc
+    PowerOfTen: 27
+  - Suffix: Nonillion
+    SuffixAbbreviation: No
+    PowerOfTen: 30
+  - Suffix: Decillion
+    SuffixAbbreviation: Dc
+    PowerOfTen: 33
+  - Suffix: Undecillion
+    SuffixAbbreviation: Ud
+    PowerOfTen: 36
+  - Suffix: Duodecillion
+    SuffixAbbreviation: Dd
+    PowerOfTen: 39
+  - Suffix: Tredecillion
+    SuffixAbbreviation: Td
+    PowerOfTen: 42
+  - Suffix: Quattuordecillion
+    SuffixAbbreviation: Qad
+    PowerOfTen: 45
+  - Suffix: Quindecillion
+    SuffixAbbreviation: Qid
+    PowerOfTen: 48
+  - Suffix: Sexdecillion
+    SuffixAbbreviation: Sxd
+    PowerOfTen: 51
+  - Suffix: Septendecillion
+    SuffixAbbreviation: Spd
+    PowerOfTen: 54
+  - Suffix: Octodecillion
+    SuffixAbbreviation: Ocd
+    PowerOfTen: 57
+  - Suffix: Novemdecillion
+    SuffixAbbreviation: Nod
+    PowerOfTen: 60
+  - Suffix: Vigintillion
+    SuffixAbbreviation: Vg
+    PowerOfTen: 63
+  - Suffix: Unvigintillion
+    SuffixAbbreviation: Uvg
+    PowerOfTen: 66
+  - Suffix: Duovigintillion
+    SuffixAbbreviation: Dvg
+    PowerOfTen: 69
+  - Suffix: Trevigintillion
+    SuffixAbbreviation: Tvg
+    PowerOfTen: 72
+  - Suffix: Quattuorvigintillion
+    SuffixAbbreviation: Qavg
+    PowerOfTen: 75
+  - Suffix: Quinvigintillion
+    SuffixAbbreviation: Qivg
+    PowerOfTen: 78
+  - Suffix: Sexvigintillion
+    SuffixAbbreviation: Sxvg
+    PowerOfTen: 81
+  - Suffix: Septenvigintillion
+    SuffixAbbreviation: Spvg
+    PowerOfTen: 84
+  - Suffix: Octovigintillion
+    SuffixAbbreviation: Ocvg
+    PowerOfTen: 87
+  - Suffix: Novemvigintillion
+    SuffixAbbreviation: Novg
+    PowerOfTen: 90
+  - Suffix: Trigintillion
+    SuffixAbbreviation: Tg
+    PowerOfTen: 93
+  - Suffix: Untrigintillion
+    SuffixAbbreviation: Utg
+    PowerOfTen: 96
+  - Suffix: Duotrigintillion
+    SuffixAbbreviation: Dtg
+    PowerOfTen: 99
+  - Suffix: Tretrigintillion
+    SuffixAbbreviation: Ttg
+    PowerOfTen: 102
+  - Suffix: Quattuortrigintillion
+    SuffixAbbreviation: Qatg
+    PowerOfTen: 105
+  - Suffix: Quintrigintillion
+    SuffixAbbreviation: Qitg
+    PowerOfTen: 108
+  - Suffix: Sextrigintillion
+    SuffixAbbreviation: Sxtg
+    PowerOfTen: 111
+  - Suffix: Septentrigintillion
+    SuffixAbbreviation: Sptg
+    PowerOfTen: 114
+  - Suffix: Octotrigintillion
+    SuffixAbbreviation: Octg
+    PowerOfTen: 117
+  - Suffix: Novemtrigintillion
+    SuffixAbbreviation: Notg
+    PowerOfTen: 120
+  - Suffix: Quadragintillion
+    SuffixAbbreviation: Qag
+    PowerOfTen: 123
+  - Suffix: Unquadragintillion
+    SuffixAbbreviation: Uqag
+    PowerOfTen: 126
+  - Suffix: Duoquadragintillion
+    SuffixAbbreviation: Dqag
+    PowerOfTen: 129
+  - Suffix: Trequadragintillion
+    SuffixAbbreviation: Tqag
+    PowerOfTen: 132
+  - Suffix: Quattuorquadragintillion
+    SuffixAbbreviation: Qaqag
+    PowerOfTen: 135
+  - Suffix: Quinquadragintillion
+    SuffixAbbreviation: Qiqag
+    PowerOfTen: 138
+  - Suffix: Sexquadragintillion
+    SuffixAbbreviation: Sxqag
+    PowerOfTen: 141
+  - Suffix: Septenquadragintillion
+    SuffixAbbreviation: Spqag
+    PowerOfTen: 144
+  - Suffix: Octaquadragintillion
+    SuffixAbbreviation: Ocqag
+    PowerOfTen: 147
+  - Suffix: Novemquadragintillion
+    SuffixAbbreviation: Noqag
+    PowerOfTen: 150
+  - Suffix: Quinquagintillion
+    SuffixAbbreviation: Qig
+    PowerOfTen: 153
+  - Suffix: Unquinquagintillion
+    SuffixAbbreviation: UQig
+    PowerOfTen: 156
+  - Suffix: Duoquinquagintillion
+    SuffixAbbreviation: DQig
+    PowerOfTen: 159
+  - Suffix: Trequinquagintillion
+    SuffixAbbreviation: TQig
+    PowerOfTen: 162
+  - Suffix: Quattuorquinquagintillion
+    SuffixAbbreviation: QaQig
+    PowerOfTen: 165
+  - Suffix: Quinquinquagintillion
+    SuffixAbbreviation: QiQig
+    PowerOfTen: 168
+  - Suffix: Sexquinquagintillion
+    SuffixAbbreviation: SxQig
+    PowerOfTen: 171
+  - Suffix: Septenquinquagintillion
+    SuffixAbbreviation: SpQig
+    PowerOfTen: 174
+  - Suffix: Octoquinquagintillion
+    SuffixAbbreviation: OcQig
+    PowerOfTen: 177
+  - Suffix: Novemquinquagintillion
+    SuffixAbbreviation: NoQig
+    PowerOfTen: 180
+  - Suffix: Sexagintillion
+    SuffixAbbreviation: Sxg
+    PowerOfTen: 183
+  - Suffix: Unsexagintillion
+    SuffixAbbreviation: USxg
+    PowerOfTen: 186
+  - Suffix: Duosexagintillion
+    SuffixAbbreviation: DSxg
+    PowerOfTen: 189
+  - Suffix: Tresexagintillion
+    SuffixAbbreviation: TSxg
+    PowerOfTen: 192
+  - Suffix: Quattuorsexagintillion
+    SuffixAbbreviation: QaSxg
+    PowerOfTen: 195
+  - Suffix: Quinsexagintillion
+    SuffixAbbreviation: QiSxg
+    PowerOfTen: 198
+  - Suffix: Sexsexagintillion
+    SuffixAbbreviation: SxSxg
+    PowerOfTen: 201
+  - Suffix: Septensexagintillion
+    SuffixAbbreviation: SpSxg
+    PowerOfTen: 204
+  - Suffix: Octosexagintillion
+    SuffixAbbreviation: OcSxg
+    PowerOfTen: 207
+  - Suffix: Novemsexagintillion
+    SuffixAbbreviation: NoSxg
+    PowerOfTen: 210
+  - Suffix: Septuagintillion
+    SuffixAbbreviation: Spg
+    PowerOfTen: 213
+  - Suffix: Unseptuagintillion
+    SuffixAbbreviation: USpg
+    PowerOfTen: 216
+  - Suffix: Duoseptuagintillion
+    SuffixAbbreviation: DSpg
+    PowerOfTen: 219
+  - Suffix: Treseptuagintillion
+    SuffixAbbreviation: TSpg
+    PowerOfTen: 222
+  - Suffix: Quattuorseptuagintillion
+    SuffixAbbreviation: QaSpg
+    PowerOfTen: 225
+  - Suffix: Quinseptuagintillion
+    SuffixAbbreviation: QiSpg
+    PowerOfTen: 228
+  - Suffix: Sexseptuagintillion
+    SuffixAbbreviation: SxSpg
+    PowerOfTen: 231
+  - Suffix: Septenseptuagintillion
+    SuffixAbbreviation: SpSpg
+    PowerOfTen: 234
+  - Suffix: Octoseptuagintillion
+    SuffixAbbreviation: OcSpg
+    PowerOfTen: 237
+  - Suffix: Novemseptuagintillion
+    SuffixAbbreviation: NoSpg
+    PowerOfTen: 240
+  - Suffix: Octogintillion
+    SuffixAbbreviation: Ocg
+    PowerOfTen: 243
+  - Suffix: Unoctogintillion
+    SuffixAbbreviation: UOcg
+    PowerOfTen: 246
+  - Suffix: Duooctogintillion
+    SuffixAbbreviation: DOcg
+    PowerOfTen: 249
+  - Suffix: Treoctogintillion
+    SuffixAbbreviation: TOcg
+    PowerOfTen: 252
+  - Suffix: Quattuoroctogintillion
+    SuffixAbbreviation: QaOcg
+    PowerOfTen: 255
+  - Suffix: Quinoctogintillion
+    SuffixAbbreviation: QiOcg
+    PowerOfTen: 258
+  - Suffix: Sexoctogintillion
+    SuffixAbbreviation: SxOcg
+    PowerOfTen: 261
+  - Suffix: Septenoctogintillion
+    SuffixAbbreviation: SpOcg
+    PowerOfTen: 264
+  - Suffix: Octooctogintillion
+    SuffixAbbreviation: OcOcg
+    PowerOfTen: 267
+  - Suffix: Novemoctogintillion
+    SuffixAbbreviation: NoOcg
+    PowerOfTen: 270
+  - Suffix: Nonagintillion
+    SuffixAbbreviation: Nog
+    PowerOfTen: 273
+  - Suffix: Unnonagintillion
+    SuffixAbbreviation: UNog
+    PowerOfTen: 276
+  - Suffix: Duononagintillion
+    SuffixAbbreviation: DNog
+    PowerOfTen: 279
+  - Suffix: Trenonagintillion
+    SuffixAbbreviation: TNog
+    PowerOfTen: 282
+  - Suffix: Quattuornonagintillion
+    SuffixAbbreviation: QaNog
+    PowerOfTen: 285
+  - Suffix: Quinnonagintillion
+    SuffixAbbreviation: QiNog
+    PowerOfTen: 288
+  - Suffix: Sexnonagintillion
+    SuffixAbbreviation: SxNog
+    PowerOfTen: 291
+  - Suffix: Septennonagintillion
+    SuffixAbbreviation: SpNog
+    PowerOfTen: 294
+  - Suffix: Octononagintillion
+    SuffixAbbreviation: OcNog
+    PowerOfTen: 297
+  - Suffix: Novemnonagintillion
+    SuffixAbbreviation: NoNog
+    PowerOfTen: 300
+  - Suffix: Centillion
+    SuffixAbbreviation: C
+    PowerOfTen: 303
+  - Suffix: Uncentillion
+    SuffixAbbreviation: Uc
+    PowerOfTen: 306

@@ -83,6 +83,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 241544940131808202, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
+      propertyPath: moveSpeed
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 2016540388205533756, guid: 412977ce58e31814fba16ccdac0403f9, type: 3}
       propertyPath: m_Name
       value: MaleNpc
