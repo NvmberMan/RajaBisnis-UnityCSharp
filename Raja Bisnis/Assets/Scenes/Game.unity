@@ -378,6 +378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
+  day: 1
+  time: 0
   minSpawnTime: 0.2
   maxSpawnTime: 1
   npcLeftPoint: {fileID: 711880699}
@@ -387,6 +389,8 @@ MonoBehaviour:
   canvas: {fileID: 1123082560}
   canvasGame: {fileID: 2030573429}
   moneyText: {fileID: 22820892}
+  dayText: {fileID: 287661180}
+  timeText: {fileID: 1364130673}
   popupMoneyEFX: {fileID: 2737443841707923509, guid: b30ab36d008b27940b231832d3d23143, type: 3}
   specialMoneyEFX: {fileID: 2737443841707923509, guid: 8bd97418b42c5ea4f8f80d7f4dfc2e65, type: 3}
   containerEFX: {fileID: 153238874}
@@ -4735,7 +4739,7 @@ GameObject:
   - component: {fileID: 287661181}
   - component: {fileID: 287661180}
   m_Layer: 5
-  m_Name: TextDay
+  m_Name: Day Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23086,7 +23090,7 @@ GameObject:
   - component: {fileID: 1364130674}
   - component: {fileID: 1364130673}
   m_Layer: 5
-  m_Name: WheaterText
+  m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23370,7 +23374,7 @@ GameObject:
   - component: {fileID: 1379445382}
   - component: {fileID: 1379445381}
   m_Layer: 5
-  m_Name: TextDay (1)
+  m_Name: Weater Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34340,9 +34344,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1265275075}
-  - {fileID: 2030573430}
   - {fileID: 1010102469}
   - {fileID: 1711034941}
   - {fileID: 642941006}
+  - {fileID: 2030573430}
   - {fileID: 1123082558}
   - {fileID: 12837021}

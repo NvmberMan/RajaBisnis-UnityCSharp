@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     private void Awake() { instance = this; }
     [Header("Game Data")]
     private string moneyString;
+
     public double money;
+    public int day;
+    public float time;
 
     [Header("System Npc")]
     public float minSpawnTime = 1;
@@ -27,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     [Space(5)]
     [SerializeField] private TMP_Text moneyText;
+    [SerializeField] private TMP_Text dayText;
+    [SerializeField] private TMP_Text timeText;
 
     [Space(5)]
     [SerializeField] private GameObject popupMoneyEFX;
@@ -37,6 +42,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateMoney();
+        UpdateDay();
     }
 
     private void Update()
@@ -45,6 +51,30 @@ public class GameManager : MonoBehaviour
         {
             GetMoney(9352, "popup");
         }
+        TimeSystem();
+    }
+
+    public void TimeSystem()
+    {
+        int menit = Mathf.FloorToInt(time / 60);
+        int detik = Mathf.FloorToInt(time % 60);
+
+        time += 4 * Time.deltaTime;
+
+
+        timeText.text = menit.ToString("00") + " : " + detik.ToString("00");
+
+        if (time >= 1440)
+        {
+            day++;
+            time = 0;
+            UpdateDay();
+        }
+    }
+
+    public void UpdateDay()
+    {
+        dayText.text = "Day " + day.ToString();
     }
 
     public void GetMoney(double value, string animation = "none")
