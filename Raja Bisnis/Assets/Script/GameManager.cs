@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake() { instance = this; }
     [Header("Game Data")]
-    public string moneyString;
+    private string moneyString;
     public double money;
 
     [Header("System Npc")]
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GetMoney(93521, "special");
+            GetMoney(9352, "popup");
         }
     }
 
