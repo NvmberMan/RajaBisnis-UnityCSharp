@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public double money;
     public int day;
+    [Range(0, 1440)]
     public float time;
 
     [Header("System Npc")]

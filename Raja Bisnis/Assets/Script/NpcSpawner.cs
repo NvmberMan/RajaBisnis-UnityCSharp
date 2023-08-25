@@ -27,6 +27,7 @@ public class NpcSpawner : MonoBehaviour
         Transform npcSpawnPoint = randomDirection > 50 ? gm.npcLeftPoint : gm.npcRightPoint;
 
         Npc npc = Instantiate(gm.npcPrefabs[Random.Range(0,gm.npcPrefabs.Count)], npcSpawnPoint.position, Quaternion.identity, npcSpawnPoint);
+        npc.targetShop = RukoManager.instance.shopObjects[Random.Range(0, RukoManager.instance.shopObjects.Length)];
 
         if(randomDirection > 50)
         {

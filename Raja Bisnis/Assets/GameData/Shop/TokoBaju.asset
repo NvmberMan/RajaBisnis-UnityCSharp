@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c789b45c6f01fe848803b31db18a62ce, type: 3}
+  m_Name: TokoBaju
+  m_EditorClassIdentifier: 
+  nameShop: Toko Baju
+  displayShop: {fileID: 21300000, guid: 009af987d9ed7c342b0a4f29e0d52295, type: 3}
+  lvlShop: 1
+  lvl_Default: 1
+  lvlMax: 10
+  incomeShop: 100
+  incomeShop_Default: 100
+  capacityShop: 0
+  capacity_Default: 0
+  capacityMax: 8
+  capacity_Temp: 9
+  bankShop: 0
+  bank_Default: 0
+  bankMax: 100
+  servingTimeShop: 4
+  servingTimeShop_Default: 4
+  expShop:
+  - exp: 0
+    max: 40
+  - exp: 0
+    max: 50
+  - exp: 0
+    max: 60
+  menu:
+  - name: kasjldf
+    currLevel: 2
+    display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
+    locked: 0
+    unlockPrice: 0
+    upgradeItem:
+    - description: lorem
+      income: 500
+      price: 1000
+    - description: lorem
+      income: 2000
+      price: 2000
+  employee:
+  - {fileID: 11400000, guid: fcd4991acff8a094c8a26a443c197eb3, type: 2}
+  hasNewGame: 1
