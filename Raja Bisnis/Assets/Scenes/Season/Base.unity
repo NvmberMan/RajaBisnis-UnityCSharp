@@ -2581,6 +2581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
+  day: 0
+  time: 0
   minSpawnTime: 0.2
   maxSpawnTime: 1
   npcLeftPoint: {fileID: 222974046}
@@ -2590,6 +2592,8 @@ MonoBehaviour:
   canvas: {fileID: 650884842}
   canvasGame: {fileID: 1909453223}
   moneyText: {fileID: 1433982453}
+  dayText: {fileID: 2011830029}
+  timeText: {fileID: 1513989288}
   popupMoneyEFX: {fileID: 2737443841707923509, guid: b30ab36d008b27940b231832d3d23143, type: 3}
   specialMoneyEFX: {fileID: 2737443841707923509, guid: 8bd97418b42c5ea4f8f80d7f4dfc2e65, type: 3}
   containerEFX: {fileID: 18954097}
@@ -14566,10 +14570,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 213187125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 220.82062, y: -161.305}
+  m_SizeDelta: {x: 424.06, y: 289.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901511460
 MonoBehaviour:
@@ -17014,10 +17018,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 213187125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 658.8806, y: -161.305}
+  m_SizeDelta: {x: 424.06, y: 289.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026153291
 MonoBehaviour:
@@ -18991,10 +18995,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 213187125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 220.82062, y: -464.695}
+  m_SizeDelta: {x: 424.06, y: 289.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171251609
 MonoBehaviour:
@@ -19636,10 +19640,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 213187125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 658.8806, y: -464.695}
+  m_SizeDelta: {x: 424.06, y: 289.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219371796
 MonoBehaviour:
