@@ -24,6 +24,8 @@ public class NavContent : MonoBehaviour
     public void updateMenu()
     {
         ShopObject so = GameManager.instance.currentShopSelected;
+
+        //refresh menu data
         foreach (Transform child in menuContainer)
         {
             Destroy(child.gameObject);
@@ -31,6 +33,7 @@ public class NavContent : MonoBehaviour
 
         for (int i = 0; i < so.menu.Count; i++)
         {
+            //instiatiate all menu from databases
             MenuUI menu = Instantiate(menuItemPrefab, menuContainer.transform).GetComponent<MenuUI>();
             int decrement = 1;
 
@@ -43,6 +46,7 @@ public class NavContent : MonoBehaviour
             menu.thisShop = so;
             menu.indexMenu = i;
 
+            //update menu data in page menu
             menu.nameText.text = so.menu[i].name;
             menu.levelText.text = "Lvl. " + so.menu[i].currLevel.ToString();
             menu.descriptionText.text = so.menu[i].upgradeItem[so.menu[i].currLevel - decrement].description;
@@ -63,4 +67,5 @@ public class NavContent : MonoBehaviour
 
         }
     }
+
 }

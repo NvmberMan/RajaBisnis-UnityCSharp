@@ -68,6 +68,7 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+    //view selected equipment
     public void viewEquipment(Equipment eq)
     {
         if (eq.display != null)

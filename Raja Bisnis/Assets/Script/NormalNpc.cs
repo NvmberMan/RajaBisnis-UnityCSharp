@@ -11,11 +11,17 @@ public class NormalNpc : Npc
     }
     private void Update()
     {
-        NpcWalking();
 
-        if(goToTarget)
+        if(goToTarget && !roadTarget)
         {
             NpcWalkToShop();
+        }else if(roadTarget)
+        {
+            NpcBackToRoad();
+        }else
+        {
+            NpcWalking();
+
         }
     }
 

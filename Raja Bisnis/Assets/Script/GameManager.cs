@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     public Transform npcLeftPoint;
     public Transform npcRightPoint;
-    public List<Npc> npcPrefabs = new List<Npc>();
+    public List<NpcItem> npcPrefabs = new List<NpcItem>();
 
     [Header("System UI")]
     [SerializeField] private Canvas canvas;
@@ -149,8 +149,10 @@ public class GameManager : MonoBehaviour
     }
 
 
+    //Open RukoManager or Update.... when we click in selection menu
     public void updateRukoManager()
     {
+
         if (currentShopSelected != null)
         {
             EmployeeManager.instance.updateEmployee();
@@ -158,7 +160,6 @@ public class GameManager : MonoBehaviour
 
             display.sprite = currentShopSelected.displayShop;
             lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
-            capacityText.text = currentShopSelected.capacityShop.ToString() + " / " + currentShopSelected.capacityMax.ToString();
             servingTimeText.text = currentShopSelected.servingTimeShop.ToString("F1") + " ms";
             incomeText.text = SFNuffix.GetShortValue(currentShopSelected.incomeShop, 1) + " / Hari";
             experienceSlider.maxValue = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].max;

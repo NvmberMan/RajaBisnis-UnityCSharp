@@ -18,11 +18,6 @@ public class ShopObject : ScriptableObject
     public double incomeShop = 20;
     public double incomeShop_Default = 20;
 
-    [Header("Capacity")]
-    public int capacityShop = 0;
-    public int capacity_Default = 0;
-    public int capacityMax = 100;
-    public int capacity_Temp = 0;
 
     [Header("Bank")]
     public double bankShop = 0;
@@ -33,6 +28,9 @@ public class ShopObject : ScriptableObject
     public double servingTimeShop = 4;
     public double servingTimeShop_Default = 4;
 
+    [Header("Capacity")]
+    public List<NpcItem> capacityNPC = new List<NpcItem>();
+
     [Header("Experience")]
     public List<Experience> expShop = new List<Experience>();
 
@@ -40,9 +38,9 @@ public class ShopObject : ScriptableObject
     [Header("Menus")]
     public List<Menu> menu = new List<Menu>();
 
-    [Space(10)]
-    [Header("Employee")]
-    public List<Employee> employee = new List<Employee>();
+    //[Space(10)]
+    //[Header("Employee")]
+    //public List<Employee> employee = new List<Employee>();
 
     [Space(10)]
     [Header("Equipment")]
@@ -52,11 +50,6 @@ public class ShopObject : ScriptableObject
 
     public void updateData()
     {
-        servingTimeShop = 0;
-        for(int i = 0; i < employee.Count; i++)
-        {
-            servingTimeShop += employee[i].serveSpeed;
-        }
 
         incomeShop = 0;
         for (int i = 0; i < menu.Count; i++)
@@ -68,19 +61,16 @@ public class ShopObject : ScriptableObject
 
     public void newShop()
     {
-        if(!hasNewGame)
+        if (!hasNewGame)
         {
             lvlShop = lvl_Default;
             incomeShop = incomeShop_Default;
-            capacityShop = capacity_Default;
             servingTimeShop = servingTimeShop_Default;
 
-            
 
-            capacity_Temp = 0;
 
             //reset Exp
-            for(int i = 0; i < expShop.Count; i++)
+            for (int i = 0; i < expShop.Count; i++)
             {
                 expShop[i].exp = 0;
             }
@@ -90,11 +80,15 @@ public class ShopObject : ScriptableObject
             {
                 menu[i].currLevel = 1;
 
-                if(menu[i].locked)
+                if (menu[i].locked)
                 {
                     menu[i].currLevel = 0;
                 }
             }
+
+            //reset Npc
+            capacityNPC.Clear();
+
         }
 
     }

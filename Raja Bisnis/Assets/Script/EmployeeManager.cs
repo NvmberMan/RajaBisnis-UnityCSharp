@@ -47,10 +47,10 @@ public class EmployeeManager : MonoBehaviour
         currentShopSelected = GameManager.instance.currentShopSelected;
 
         //set default view Employee
-        if (currentShopSelected.employee.Count > 0)
-        {
-            viewEmployee(currentShopSelected.employee[0]);
-        }
+        //if (currentShopSelected.employee.Count > 0)
+        //{
+        //    viewEmployee(currentShopSelected.employee[0]);
+        //}
 
         foreach (Transform child in employeeGrid)
         {
@@ -58,19 +58,21 @@ public class EmployeeManager : MonoBehaviour
         }
 
         //Clone employee in container
-        for(int i = 0; i < currentShopSelected.employee.Count; i++)
-        {
-            EmployeeUI em = Instantiate(employeeItemPrefab, employeeGrid).GetComponent<EmployeeUI>();
+        //for(int i = 0; i < currentShopSelected.employee.Count; i++)
+        //{
+        //    EmployeeUI em = Instantiate(employeeItemPrefab, employeeGrid).GetComponent<EmployeeUI>();
 
-            em.thisEmployee = currentShopSelected.employee[i];
+        //    em.thisEmployee = currentShopSelected.employee[i];
 
-            if(currentShopSelected.employee[i].display != null)
-                em.display.sprite = currentShopSelected.employee[i].display;
+        //    if(currentShopSelected.employee[i].display != null)
+        //        em.display.sprite = currentShopSelected.employee[i].display;
 
-            em.levelText.text = currentShopSelected.employee[i].currentLvl.ToString();
+        //    em.levelText.text = currentShopSelected.employee[i].currentLvl.ToString();
 
-        }
+        //}
     }
+
+
 
     public void viewEmployee(Employee employee)
     {

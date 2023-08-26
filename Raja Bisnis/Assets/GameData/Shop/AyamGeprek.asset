@@ -19,15 +19,15 @@ MonoBehaviour:
   lvlMax: 10
   incomeShop: 5000
   incomeShop_Default: 20
-  capacityShop: 0
-  capacity_Default: 0
-  capacityMax: 5
-  capacity_Temp: 5
   bankShop: 0
   bank_Default: 0
   bankMax: 100
-  servingTimeShop: 44.20000076293945
-  servingTimeShop_Default: 0.01
+  servingTimeShop: 1
+  servingTimeShop_Default: 1
+  capacityNPC:
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
   expShop:
   - exp: 0
     max: 40
@@ -116,9 +116,6 @@ MonoBehaviour:
     - description: sdfgdfg
       income: 3000
       price: 80000
-  employee:
-  - {fileID: 11400000, guid: fcd4991acff8a094c8a26a443c197eb3, type: 2}
-  - {fileID: 11400000, guid: 36464620deba48444aec93ff5aac28a8, type: 2}
   equipment:
   - {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
   - {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}

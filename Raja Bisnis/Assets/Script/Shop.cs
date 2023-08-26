@@ -6,7 +6,7 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     [Header("Serve System")]
-    [Range(0, 100)]
+    [Range(0, 5)]
     public float serveCounter;
 
     [Space(10)]
@@ -17,32 +17,46 @@ public class Shop : MonoBehaviour
 
     public virtual void setShop()
     {
+        //add shop gameobject to rukomanager
         RukoManager.instance.shopScenes.Add(this.gameObject.GetComponent<Shop>());
 
-        updateCapacity();
     }
 
     public virtual void servingSystem()
     {
-        if(thisObject.capacityShop > 0)
+        //check if shop is has a customer
+        if(thisObject.capacityNPC.Count > 0)
         {
             serveCounter += (float)thisObject.servingTimeShop * Time.deltaTime;
-            if (serveCounter >= 100)
+            if (serveCounter >= 5)
             {
-                thisObject.capacityShop -= 1;
-                thisObject.capacity_Temp -= 1;
                 serveCounter = 0;
-
                 GameManager.instance.GetMoney(thisObject.incomeShop, "popup");
-                updateCapacity();
+
+                //thisObject.capacityShop -= 1;
+                //npc exit from shop
+                NpcItem ni = thisObject.capacityNPC[0];
+                Npc npc = Instantiate(ni.prefabs, doorPoint[Random.Range(0, doorPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
+                npc.roadTarget = targetPoint[Random.Range(0, targetPoint.Length)];
+
+                int randomDirection = Random.Range(0, 100);
+
+                if (randomDirection > 50)
+                {
+                    npc.walkingDirection = Vector2.right;
+                    npc.transform.localScale = new Vector2(-npc.transform.localScale.x, npc.transform.localScale.y);
+                    npc.transform.SetParent(GameManager.instance.npcLeftPoint);
+                }
+                else
+                {
+                    npc.walkingDirection = Vector2.left;
+                    npc.transform.SetParent(GameManager.instance.npcRightPoint);
+
+                }
+
+                thisObject.capacityNPC.RemoveAt(0);
             }
         }
-
-    }
-
-    public virtual void updateCapacity()
-    {
-        capacityText.text = thisObject.capacityShop.ToString() + " / " + thisObject.capacityMax;
 
     }
 }

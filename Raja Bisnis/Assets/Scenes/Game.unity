@@ -553,7 +553,7 @@ MonoBehaviour:
   npcLeftPoint: {fileID: 711880699}
   npcRightPoint: {fileID: 824315129}
   npcPrefabs:
-  - {fileID: 3490016296079770176, guid: 3924bec3c2a658742a6d12f2c66d3199, type: 3}
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
   canvas: {fileID: 1123082560}
   canvasGame: {fileID: 2030573429}
   moneyText: {fileID: 22820892}
@@ -24133,7 +24133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -707.9999, y: -62}
+  m_AnchoredPosition: {x: -707.9999, y: -1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &712309861
@@ -26274,7 +26274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Employee
+  m_text: AKAN DATANG
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 293c24a269c0f3348b134b472c02421e, type: 2}
   m_sharedMaterial: {fileID: 7339944420203104364, guid: 293c24a269c0f3348b134b472c02421e, type: 2}
@@ -26924,7 +26924,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -26938,7 +26938,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 802278519}
   m_OnClick:
     m_PersistentCalls:
@@ -27040,7 +27040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
+  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28248,7 +28248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 532.0001, y: -62}
+  m_AnchoredPosition: {x: 532.0001, y: -53}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &825422544
@@ -28485,6 +28485,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1336652617}
     m_Modifications:
+    - target: {fileID: 3070167547034824190, guid: 586c93063e32dd14eba58d275ffd3213, type: 3}
+      propertyPath: capacityText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4960431648025348894, guid: 586c93063e32dd14eba58d275ffd3213, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -70206,6 +70210,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1336652617}
     m_Modifications:
+    - target: {fileID: 1553558801748128502, guid: 4490c6063cc6b8d46b94ca95d3012e7d, type: 3}
+      propertyPath: capacityText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5856499688692236673, guid: 4490c6063cc6b8d46b94ca95d3012e7d, type: 3}
       propertyPath: m_Name
       value: Clothes
@@ -70387,6 +70395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Juz
       objectReference: {fileID: 0}
+    - target: {fileID: 6712167495756380630, guid: 466bedd48740ea847bb8de3815b88f9e, type: 3}
+      propertyPath: capacityText
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -70498,10 +70510,10 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 12837021}
   - {fileID: 1265275075}
   - {fileID: 1010102469}
   - {fileID: 1711034941}
   - {fileID: 642941006}
   - {fileID: 2030573430}
   - {fileID: 1123082558}
-  - {fileID: 12837021}

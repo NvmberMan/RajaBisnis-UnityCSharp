@@ -27,6 +27,7 @@ public class RukoManager : MonoBehaviour
 
         if (newGame)
         {
+            //reload all data to default
             for (int i = 0; i < shopObjects.Length; i++)
             {
                 shopObjects[i].newShop();
@@ -37,11 +38,7 @@ public class RukoManager : MonoBehaviour
             }
         }
 
-        //update ui di atas ruko
-        for (int i = 0; i < shopScenes.Count; i++)
-        {
-            shopScenes[i].updateCapacity();
-        }
+
     }
 
     void Update()

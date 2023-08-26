@@ -11,22 +11,30 @@ public class Npc : MonoBehaviour
     [SerializeField] private GameObject graphic;
 
     [HideInInspector]public Vector2 walkingDirection;
-    [HideInInspector] public bool stopWalking, goToTarget, isTemp;
+    [HideInInspector] public bool stopWalking, goToTarget;
+    [HideInInspector]public NpcItem thisNpc;
+    [HideInInspector]public Transform roadTarget;
 
     private RectTransform rectTransform, doorRect;
     private float dist;
 
-    Transform target, doorTarget;
+    Transform target;
+    Transform  doorTarget;
     Animator anim;
     Shop sh;
     public virtual void CheckTarget()
     {
         anim = graphic.GetComponent<Animator>();
+
+        //check if npc want to buy something
         if (targetShop)
         {
             RukoManager rm = RukoManager.instance;
+
+            //searching shop to buy purpose
             for (int i = 0; i < rm.shopScenes.Count; i++)
             {
+
                 if (rm.shopScenes[i].thisObject == targetShop)
                 {
                     //checking distance of shop with npc
@@ -34,21 +42,18 @@ public class Npc : MonoBehaviour
                     target = sh.targetPoint[Random.Range(0, sh.targetPoint.Length)];
                     doorTarget = sh.doorPoint[Random.Range(0, sh.doorPoint.Length)];
 
-                    if(targetShop.capacity_Temp < targetShop.capacityMax)
-                    {
-                         targetShop.capacity_Temp += 1;
-                        isTemp = true;
-                    }
                     break;
                 }
             }
         }
     }
 
+    //npc walking left and right
     public virtual void NpcWalking()
     {
         if(!stopWalking)
         {
+            anim.Play("Walk");
             rectTransform = GetComponent<RectTransform>();
             Vector2 position = rectTransform.anchoredPosition;
 
@@ -77,16 +82,15 @@ public class Npc : MonoBehaviour
         //checking npc if want to buy something
         if (target)
         {
-            if(targetShop.capacity_Temp < targetShop.capacityMax || isTemp)
-            {
-                dist = Vector2.Distance(target.position, transform.position);
+            //check distance between player with frontpoint
+             dist = Vector2.Distance(target.position, transform.position);
 
-                if (dist <= 2 && isTemp)
-                {
-                    goToTarget = true;
-                    stopWalking = true;
-                }
-            }
+             if (dist <= 2)
+             {
+                 goToTarget = true;
+                 stopWalking = true;
+             }
+            
 
         }
 
@@ -99,20 +103,38 @@ public class Npc : MonoBehaviour
         doorRect = doorTarget.GetComponent<RectTransform>();
         rectTransform.position = Vector2.MoveTowards(transform.position, doorTarget.position, 4 * Time.deltaTime);
 
-        anim.Play("GirlWalk_Front");
+        anim.Play("Walk_Front");
 
-        if(Vector2.Distance(transform.position, doorTarget.position) < 1 && !insideShop)
+        //check distance between player with door
+        if (Vector2.Distance(transform.position, doorTarget.position) < 1 && !insideShop)
         {
             //Menu m = targetShop.menu[Random.Range(0,targetShop.menu.Count)];
             //UpgradeItem up = m.upgradeItem[m.currLevel - 1];
 
             //GameManager.instance.GetMoney(up.income, "popup");
 
-            targetShop.capacityShop += 1;
-            sh.updateCapacity();
+            sh.thisObject.capacityNPC.Add(thisNpc);
 
             Destroy(this.gameObject);
             insideShop = true;
+        }
+    }
+
+
+    public void NpcBackToRoad()
+    {
+        anim.Play("Walk_Back");
+
+        rectTransform = GetComponent<RectTransform>();
+
+
+
+        rectTransform.position = Vector2.MoveTowards(transform.position, roadTarget.position, 4 * Time.deltaTime);
+
+
+        if(Vector2.Distance(transform.position, roadTarget.position) < 0.1f)
+        {
+            roadTarget = null;
         }
     }
 }
