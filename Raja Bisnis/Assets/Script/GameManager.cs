@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private TMP_Text dayText;
     [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text fpsText;
 
     [Space(5)]
     [SerializeField] private GameObject popupMoneyEFX;
@@ -57,6 +58,20 @@ public class GameManager : MonoBehaviour
     {
         UpdateMoney();
         UpdateDay();
+
+        StartCoroutine(FramesPerSecond());
+
+    }
+
+    IEnumerator FramesPerSecond()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            fpsText.text = "FPS : " + (1 / Time.deltaTime).ToString("F1");
+
+        }
+
     }
 
     private void Update()
