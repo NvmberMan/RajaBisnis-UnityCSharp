@@ -9,13 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856fc3540f0f4ce48bbce91c70bf6427, type: 3}
-  m_Name: Andi
+  m_Script: {fileID: 11500000, guid: 1078d137f4cfa5b469da964900a9cb31, type: 3}
+  m_Name: Etalase
   m_EditorClassIdentifier: 
-  nameEmployee: Andi
-  display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
+  nameEquipment: Etalase
+  display: {fileID: 21300000, guid: 96404ac1406d32648a26a4d55655f964, type: 3}
   currentLvl: 1
-  serveSpeed: 24.2
-  restSpeed: 31.4
-  stamina: 21.8
-  attitude: 10.6
+  upgrade:
+  - capacityAdd: 1
+    bankAdd: 0
+    comfyAdd: 0
+  - capacityAdd: 3
+    bankAdd: 0
+    comfyAdd: 0

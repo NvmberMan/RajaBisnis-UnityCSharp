@@ -44,7 +44,27 @@ public class ShopObject : ScriptableObject
     [Header("Employee")]
     public List<Employee> employee = new List<Employee>();
 
+    [Space(10)]
+    [Header("Equipment")]
+    public List<Equipment> equipment = new List<Equipment>();
+
     [HideInInspector]public bool hasNewGame = false;
+
+    public void updateData()
+    {
+        servingTimeShop = 0;
+        for(int i = 0; i < employee.Count; i++)
+        {
+            servingTimeShop += employee[i].serveSpeed;
+        }
+
+        incomeShop = 0;
+        for (int i = 0; i < menu.Count; i++)
+        {
+            if(menu[i].currLevel >= 1)
+                incomeShop += menu[i].upgradeItem[menu[i].currLevel - 1].income;
+        }
+    }
 
     public void newShop()
     {
@@ -55,11 +75,25 @@ public class ShopObject : ScriptableObject
             capacityShop = capacity_Default;
             servingTimeShop = servingTimeShop_Default;
 
+            
+
             capacity_Temp = 0;
 
+            //reset Exp
             for(int i = 0; i < expShop.Count; i++)
             {
                 expShop[i].exp = 0;
+            }
+
+            //reset Menu level
+            for (int i = 0; i < menu.Count; i++)
+            {
+                menu[i].currLevel = 1;
+
+                if(menu[i].locked)
+                {
+                    menu[i].currLevel = 0;
+                }
             }
         }
 
@@ -78,13 +112,14 @@ public class Experience
 [System.Serializable]
 public class Menu
 {
-    public string name;
-    public int currLevel;
+    public string name = "New Menu";
+    public int currLevel = 1;
     public Sprite display;
 
     [Space(10)]
     public bool locked;
     public double unlockPrice;
+    public int levelShopRequire = 0;
 
     public List<UpgradeItem> upgradeItem = new List<UpgradeItem>();
 }
@@ -94,9 +129,9 @@ public class Menu
 public class UpgradeItem
 {
     [TextAreaAttribute]
-    public string description;
-    public double income;
-    public double price;
+    public string description = "Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan remaja";
+    public double income = 1000;
+    public double price = 2000;
 
 }
 

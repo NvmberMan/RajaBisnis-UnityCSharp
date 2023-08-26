@@ -9,18 +9,9 @@ public class RukoManager : MonoBehaviour
     public static RukoManager instance;
     private void Awake() { instance = this; }
 
-    public ShopObject currentShopSelected;
     public bool newGame;
 
-    [Header("Ruko Manager")]
-    [SerializeField] private TMP_Text lvlText;
-    [SerializeField] private TMP_Text capacityText;
-    [SerializeField] private TMP_Text servingTimeText;
-    [SerializeField] private TMP_Text incomeText;
 
-    [Space(10)]
-    [SerializeField] private Image display;
-    [SerializeField] private Slider experienceSlider;
 
     [Space(10)]
     public ShopObject[] shopObjects;
@@ -39,6 +30,8 @@ public class RukoManager : MonoBehaviour
             for (int i = 0; i < shopObjects.Length; i++)
             {
                 shopObjects[i].newShop();
+                shopObjects[i].updateData();
+
                 shopObjects[i].hasNewGame = true;
 
             }
@@ -53,22 +46,7 @@ public class RukoManager : MonoBehaviour
 
     void Update()
     {
-        
+ 
     }
 
-    public void updateRukoManager()
-    {
-        if(currentShopSelected != null)
-        {
-
-            display.sprite = currentShopSelected.displayShop;
-            lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
-            capacityText.text = currentShopSelected.capacityShop.ToString() + " / " + currentShopSelected.capacityMax.ToString();
-            servingTimeText.text = currentShopSelected.servingTimeShop.ToString() + " / menit";
-            incomeText.text = currentShopSelected.incomeShop.ToString() + " / Hari";
-            experienceSlider.maxValue = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].max;
-            experienceSlider.value = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp;
-        }
-
-    }
 }

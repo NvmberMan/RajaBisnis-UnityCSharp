@@ -49,5 +49,5 @@ MonoBehaviour:
       income: 700
       price: 2000
   employee:
-  - {fileID: 11400000, guid: fcd4991acff8a094c8a26a443c197eb3, type: 2}
+  - {fileID: 11400000, guid: 36464620deba48444aec93ff5aac28a8, type: 2}
   hasNewGame: 1

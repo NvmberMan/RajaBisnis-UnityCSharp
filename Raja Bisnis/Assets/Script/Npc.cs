@@ -81,7 +81,7 @@ public class Npc : MonoBehaviour
             {
                 dist = Vector2.Distance(target.position, transform.position);
 
-                if (dist <= 2)
+                if (dist <= 2 && isTemp)
                 {
                     goToTarget = true;
                     stopWalking = true;

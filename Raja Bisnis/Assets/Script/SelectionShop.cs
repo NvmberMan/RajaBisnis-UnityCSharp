@@ -9,7 +9,7 @@ public class SelectionShop : MonoBehaviour
 
     public void selectShop()
     {
-        RukoManager.instance.currentShopSelected = shopObject;
-        RukoManager.instance.updateRukoManager();
+        GameManager.instance.currentShopSelected = shopObject;
+        GameManager.instance.updateRukoManager();
     }
 }

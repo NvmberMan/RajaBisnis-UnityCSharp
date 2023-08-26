@@ -19,6 +19,6 @@ public class AyamGeprek : Shop
     // Update is called once per frame
     void Update()
     {
-        
+        servingSystem();
     }
 }

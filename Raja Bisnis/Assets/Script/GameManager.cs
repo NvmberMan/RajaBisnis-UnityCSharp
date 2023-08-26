@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -38,6 +39,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject popupMoneyEFX;
     [SerializeField] private GameObject specialMoneyEFX;
     [SerializeField] private GameObject containerEFX;
+
+    [Header("Ruko Manager")]
+    public ShopObject currentShopSelected;
+    [Space(5)]
+    [SerializeField] private TMP_Text lvlText;
+    [SerializeField] private TMP_Text capacityText;
+    [SerializeField] private TMP_Text servingTimeText;
+    [SerializeField] private TMP_Text incomeText;
+
+    [Space(10)]
+    [SerializeField] private Image display;
+    [SerializeField] private Slider experienceSlider;
 
 
     private void Start()
@@ -133,6 +146,25 @@ public class GameManager : MonoBehaviour
     {
         moneyString = SFNuffix.GetShortValue(money, 1);
         moneyText.text = moneyString;
+    }
+
+
+    public void updateRukoManager()
+    {
+        if (currentShopSelected != null)
+        {
+            EmployeeManager.instance.updateEmployee();
+            EquipmentManager.instance.updateEquipment();
+
+            display.sprite = currentShopSelected.displayShop;
+            lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
+            capacityText.text = currentShopSelected.capacityShop.ToString() + " / " + currentShopSelected.capacityMax.ToString();
+            servingTimeText.text = currentShopSelected.servingTimeShop.ToString("F1") + " ms";
+            incomeText.text = SFNuffix.GetShortValue(currentShopSelected.incomeShop, 1) + " / Hari";
+            experienceSlider.maxValue = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].max;
+            experienceSlider.value = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp;
+        }
+
     }
 
 

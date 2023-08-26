@@ -14,25 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameShop: Ayam Geprek
   displayShop: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-  lvlShop: 1
-  lvl_Default: 1
-  lvlMax: 5
-  incomeShop: 20
+  lvlShop: 10
+  lvl_Default: 10
+  lvlMax: 10
+  incomeShop: 5000
   incomeShop_Default: 20
-  capacityShop: 2
+  capacityShop: 0
   capacity_Default: 0
   capacityMax: 5
-  capacity_Temp: 9
+  capacity_Temp: 5
   bankShop: 0
   bank_Default: 0
   bankMax: 100
-  servingTimeShop: 4
-  servingTimeShop_Default: 4
+  servingTimeShop: 44.20000076293945
+  servingTimeShop_Default: 0.01
   expShop:
   - exp: 0
     max: 40
   - exp: 0
     max: 50
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 60
   - exp: 0
     max: 60
   menu:
@@ -41,55 +55,71 @@ MonoBehaviour:
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 0
     unlockPrice: 0
+    levelShopRequire: 0
     upgradeItem:
     - description: asdf
       income: 2000
+      price: 500
+    - description: asdf
+      income: 4000
       price: 500
   - name: Ayam Geprek + Sambal
     currLevel: 1
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 0
     unlockPrice: 1000
+    levelShopRequire: 0
     upgradeItem:
     - description: sdfgdfg
       income: 3000
       price: 80000
   - name: Ayam Geprek + Sambal
-    currLevel: 1
+    currLevel: 0
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     unlockPrice: 1000
+    levelShopRequire: 5
     upgradeItem:
     - description: sdfgdfg
       income: 3000
       price: 80000
   - name: Ayam Geprek + Sambal
-    currLevel: 1
+    currLevel: 0
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     unlockPrice: 1000
+    levelShopRequire: 10
     upgradeItem:
     - description: sdfgdfg
       income: 3000
       price: 80000
   - name: Ayam Geprek + Sambal
-    currLevel: 1
+    currLevel: 0
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     unlockPrice: 1000
+    levelShopRequire: 15
     upgradeItem:
     - description: sdfgdfg
       income: 3000
       price: 80000
+    - description: sdfgdfg
+      income: 5000
+      price: 80000
   - name: Ayam Geprek + Sambal
-    currLevel: 1
+    currLevel: 0
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     unlockPrice: 1000
+    levelShopRequire: 20
     upgradeItem:
     - description: sdfgdfg
       income: 3000
       price: 80000
   employee:
   - {fileID: 11400000, guid: fcd4991acff8a094c8a26a443c197eb3, type: 2}
+  - {fileID: 11400000, guid: 36464620deba48444aec93ff5aac28a8, type: 2}
+  equipment:
+  - {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
+  - {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
   hasNewGame: 1

@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class EmployeeManager : MonoBehaviour
+public class EquipmentUI : MonoBehaviour
 {
-    public static EmployeeManager instance;
-    private void Awake() { instance = this; }
+    public Equipment thisEquipment;
+    public Image display;
+    public TMP_Text levelText;
 
-    public Employee[] ownEmployeeObjects;
-    public Employee[] employeeObjects;
     // Start is called before the first frame update
     void Start()
     {

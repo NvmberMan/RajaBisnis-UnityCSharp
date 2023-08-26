@@ -23,7 +23,7 @@ public class NavContent : MonoBehaviour
 
     public void updateMenu()
     {
-        ShopObject so = RukoManager.instance.currentShopSelected;
+        ShopObject so = GameManager.instance.currentShopSelected;
         foreach (Transform child in menuContainer)
         {
             Destroy(child.gameObject);
@@ -32,14 +32,34 @@ public class NavContent : MonoBehaviour
         for (int i = 0; i < so.menu.Count; i++)
         {
             MenuUI menu = Instantiate(menuItemPrefab, menuContainer.transform).GetComponent<MenuUI>();
+            int decrement = 1;
+
+            //check if menu is locked
+            if (so.menu[i].currLevel <= 0)
+            {
+                decrement = 0;
+            }
+
+            menu.thisShop = so;
+            menu.indexMenu = i;
+
             menu.nameText.text = so.menu[i].name;
-            menu.descriptionText.text = so.menu[i].upgradeItem[so.menu[i].currLevel - 1].description;
-            menu.incomeText.text = SFNuffix.GetShortValue(so.menu[i].upgradeItem[so.menu[i].currLevel - 1].income, 1) + " / Perorang";
-            menu.priceText.text = SFNuffix.GetShortValue(so.menu[i].upgradeItem[so.menu[i].currLevel - 1].price, 1);
+            menu.levelText.text = "Lvl. " + so.menu[i].currLevel.ToString();
+            menu.descriptionText.text = so.menu[i].upgradeItem[so.menu[i].currLevel - decrement].description;
+            menu.incomeText.text = SFNuffix.GetShortValue(so.menu[i].upgradeItem[so.menu[i].currLevel - decrement].income, 1) + " / Perorang";
+            menu.priceText.text = SFNuffix.GetShortValue(so.menu[i].upgradeItem[so.menu[i].currLevel - decrement].price, 1);
 
             menu.isLocked = so.menu[i].locked;
             menu.unlockPrice = so.menu[i].unlockPrice;
             menu.display.sprite = so.menu[i].display;
+
+
+
+            //check if level has max
+            if (so.menu[i].currLevel >= so.menu[i].upgradeItem.Count)
+            {
+                menu.priceText.text = "Max";
+            }
 
         }
     }
