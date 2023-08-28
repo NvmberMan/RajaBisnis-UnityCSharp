@@ -9,7 +9,17 @@ public class WorldLight : MonoBehaviour
     [SerializeField] private Gradient gradient;
     public Light2D _light;
 
-    void Update()
+    private void Start()
+    {
+        StartCoroutine(updateWorldLight());
+    }
+    IEnumerator updateWorldLight()
+    {
+        yield return new WaitForSeconds(1);
+        updateLight();
+    }
+
+    void updateLight()
     {
         float percentage = Mathf.Clamp01(GameManager.instance.time / 1444);
         _light.color = gradient.Evaluate(percentage);
