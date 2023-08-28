@@ -7,6 +7,7 @@ public class Equipment : ScriptableObject
 {
 
     public string nameEquipment = "New Equipment";
+    public string description = "Description of equipment";
     public Sprite display;
     public int currentLvl = 1;
 
@@ -18,7 +19,8 @@ public class Equipment : ScriptableObject
 [System.Serializable]
 public class EquipmentUpgrade
 {
-    public int capacityAdd = 1;
-    public float bankAdd = 0;
-    public float comfyAdd = 0;
+    public float tip = 1;
+    public float tipChange = 0.1f;
+    [Space(10)]
+    public double price = 100;
 }

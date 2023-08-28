@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Chair & Table
   m_EditorClassIdentifier: 
   nameEquipment: Etalase
+  description: Description of equipment
   display: {fileID: 21300000, guid: d4e3a23e1699aef408c10554eb24d710, type: 3}
   currentLvl: 1
   upgrade:
-  - capacityAdd: 2
-    bankAdd: 0
-    comfyAdd: 0
-  - capacityAdd: 4
-    bankAdd: 0
-    comfyAdd: 0
+  - tip: 1
+    tipChange: 0.1
+    price: 0
+  - tip: 1
+    tipChange: 0.2
+    price: 1000

@@ -10,15 +10,8 @@ public class EquipmentUI : MonoBehaviour
     public Image display;
     public TMP_Text levelText;
 
-    // Start is called before the first frame update
-    void Start()
+    public void clickThis()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EquipmentManager.instance.viewEquipment(thisEquipment);
     }
 }

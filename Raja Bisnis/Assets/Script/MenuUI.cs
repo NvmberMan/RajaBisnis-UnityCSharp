@@ -52,24 +52,51 @@ public class MenuUI : MonoBehaviour
         //check if level is not max
         if(thisShop.menu[indexMenu].currLevel < thisShop.menu[indexMenu].upgradeItem.Count)
         {
-            thisShop.menu[indexMenu].currLevel += 1;
+            double price = thisShop.menu[indexMenu].upgradeItem[thisShop.menu[indexMenu].currLevel].price;
+            //check player money
+            if (GameManager.instance.money >= price)
+            {
+                thisShop.menu[indexMenu].currLevel += 1;
 
-            NavContent.instance.updateMenu();
-            thisShop.updateData();
-            GameManager.instance.updateRukoManager();
+                NavContent.instance.updateMenu();
+                thisShop.updateData();
+                GameManager.instance.updateRukoManager();
+
+                GameManager.instance.money -= price;
+                GameManager.instance.UpdateMoney();
+            }
+            else
+            {
+                GameManager.instance.showAlert("Uang Kamu Tidak Cukup", 3);
+            }
+
         }
     }
 
     public void unlock()
     {
         //check if level is locked
-        if(thisShop.menu[indexMenu].locked)
+        if(thisShop.menu[indexMenu].currLevel == 0)
         {
-            thisShop.menu[indexMenu].currLevel = 1;
+            double price = thisShop.menu[indexMenu].upgradeItem[0].price;
+            //check player money
+            if (GameManager.instance.money >= price)
+            {
+                thisShop.menu[indexMenu].currLevel = 1;
 
-            NavContent.instance.updateMenu();
-            thisShop.updateData();
-            GameManager.instance.updateRukoManager();
+                NavContent.instance.updateMenu();
+                thisShop.updateData();
+                GameManager.instance.updateRukoManager();
+
+                //update money
+                GameManager.instance.money -= price;
+                GameManager.instance.UpdateMoney();
+            }
+            else
+            {
+                GameManager.instance.showAlert("Uang Kamu Tidak Cukup", 3);
+            }
+
 
 
         }

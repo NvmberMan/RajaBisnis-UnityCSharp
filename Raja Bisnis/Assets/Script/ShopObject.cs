@@ -26,7 +26,6 @@ public class ShopObject : ScriptableObject
 
     [Header("Serving")]
     public double servingTimeShop = 4;
-    public double servingTimeShop_Default = 4;
 
     [Header("Capacity")]
     public List<NpcItem> capacityNPC = new List<NpcItem>();
@@ -41,6 +40,9 @@ public class ShopObject : ScriptableObject
     //[Space(10)]
     //[Header("Employee")]
     //public List<Employee> employee = new List<Employee>();
+
+    [Header("Promo")]
+    public List<Promo> promo = new List<Promo>();
 
     [Space(10)]
     [Header("Equipment")]
@@ -65,7 +67,6 @@ public class ShopObject : ScriptableObject
         {
             lvlShop = lvl_Default;
             incomeShop = incomeShop_Default;
-            servingTimeShop = servingTimeShop_Default;
 
 
 
@@ -85,6 +86,19 @@ public class ShopObject : ScriptableObject
                     menu[i].currLevel = 0;
                 }
             }
+
+            //reset Equipment
+            for (int i = 0; i < equipment.Count; i++)
+            {
+                equipment[i].currentLvl = 1;
+            }
+
+            //reset Promo
+            for (int i = 0; i < promo.Count; i++)
+            {
+                promo[i].currentLvl = 1;
+            }
+
 
             //reset Npc
             capacityNPC.Clear();
@@ -106,13 +120,16 @@ public class Experience
 [System.Serializable]
 public class Menu
 {
-    public string name = "New Menu";
     public int currLevel = 1;
+    [Space(10)]
+    public string name = "New Menu";
+
+    [TextAreaAttribute]
+    public string description = "Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan remaja";
     public Sprite display;
 
     [Space(10)]
     public bool locked;
-    public double unlockPrice;
     public int levelShopRequire = 0;
 
     public List<UpgradeItem> upgradeItem = new List<UpgradeItem>();
@@ -122,8 +139,6 @@ public class Menu
 [System.Serializable]
 public class UpgradeItem
 {
-    [TextAreaAttribute]
-    public string description = "Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan remaja";
     public double income = 1000;
     public double price = 2000;
 

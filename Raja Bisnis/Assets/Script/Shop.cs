@@ -13,7 +13,7 @@ public class Shop : MonoBehaviour
     public ShopObject thisObject;
     public Transform[] targetPoint;
     public Transform[] doorPoint;
-    public TMP_Text capacityText;
+    public Transform uiTransform;
 
     public virtual void setShop()
     {
@@ -31,7 +31,6 @@ public class Shop : MonoBehaviour
             if (serveCounter >= 5)
             {
                 serveCounter = 0;
-                GameManager.instance.GetMoney(thisObject.incomeShop, "popup");
 
                 //thisObject.capacityShop -= 1;
                 //npc exit from shop
@@ -55,6 +54,12 @@ public class Shop : MonoBehaviour
                 }
 
                 thisObject.capacityNPC.RemoveAt(0);
+
+
+
+                //get money
+                GameManager.instance.ShopGetMoney(thisObject.incomeShop, this);
+
             }
         }
 

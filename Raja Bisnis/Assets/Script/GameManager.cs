@@ -36,9 +36,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text timeText;
 
     [Space(5)]
+    [SerializeField] private Transform alertContainer;
+
+    [Space(5)]
     [SerializeField] private GameObject popupMoneyEFX;
     [SerializeField] private GameObject specialMoneyEFX;
     [SerializeField] private GameObject containerEFX;
+    [SerializeField] private GameObject alertEfx;
 
     [Header("Ruko Manager")]
     public ShopObject currentShopSelected;
@@ -93,8 +97,6 @@ public class GameManager : MonoBehaviour
 
     public void GetMoney(double value, string animation = "none")
     {
-        
-
         Vector2 containerX = Mechanic.GetContainerSize_X(containerEFX);
         Vector2 containerY = Mechanic.GetContainerSize_Y(containerEFX);
 
@@ -142,6 +144,18 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public void ShopGetMoney(double value, Shop shop)
+    {
+        GameObject moneyEfx = Instantiate(popupMoneyEFX, popupMoneyEFX.transform.position, Quaternion.identity, shop.uiTransform);
+        moneyEfx.transform.localPosition = Vector3.zero;
+        moneyEfx.GetComponent<PopupEFX>().value = value;
+
+        Destroy(moneyEfx, 1.2f);
+
+        money += value;
+        UpdateMoney();
+    }
     public void UpdateMoney()
     {
         moneyString = SFNuffix.GetShortValue(money, 1);
@@ -157,6 +171,7 @@ public class GameManager : MonoBehaviour
         {
             EmployeeManager.instance.updateEmployee();
             EquipmentManager.instance.updateEquipment();
+            PromoManager.instance.updatePromo();
 
             display.sprite = currentShopSelected.displayShop;
             lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
@@ -166,6 +181,13 @@ public class GameManager : MonoBehaviour
             experienceSlider.value = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp;
         }
 
+    }
+
+    public void showAlert(string text, float delay = 2)
+    {
+        AlertUI a = Instantiate(alertEfx, alertContainer).GetComponent<AlertUI>();
+        a.text = text;
+        a.destroyDelayed = delay;
     }
 
 

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Etalase
   m_EditorClassIdentifier: 
   nameEquipment: Etalase
+  description: Description of equipment
   display: {fileID: 21300000, guid: 96404ac1406d32648a26a4d55655f964, type: 3}
-  currentLvl: 1
+  currentLvl: 2
   upgrade:
-  - capacityAdd: 1
-    bankAdd: 0
-    comfyAdd: 0
-  - capacityAdd: 3
-    bankAdd: 0
-    comfyAdd: 0
+  - tip: 2
+    tipChange: 0.4
+    price: 0
+  - tip: 3
+    tipChange: 0.4
+    price: 1000

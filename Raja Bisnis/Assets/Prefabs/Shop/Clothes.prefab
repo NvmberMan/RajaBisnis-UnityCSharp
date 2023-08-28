@@ -624,7 +624,7 @@ MonoBehaviour:
   doorPoint:
   - {fileID: 7506205308232155995}
   - {fileID: 2930689198138009241}
-  capacityText: {fileID: 0}
+  uiTransform: {fileID: 7492614753611677144}
 --- !u!1 &6055182297083234159
 GameObject:
   m_ObjectHideFlags: 0
