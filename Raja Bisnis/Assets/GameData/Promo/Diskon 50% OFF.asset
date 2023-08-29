@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730fc408acc1fcd4e9d20a2078d34014, type: 3}
   m_Name: Diskon 50% OFF
   m_EditorClassIdentifier: 
-  currentLvl: 1
-  description: Memanggil anak remaja 0.1 detik lebih cepat
+  description: Memanggil anak remaja
+  description2: detik lebih cepat
   addPercentage: 0.1
   display: {fileID: 21300000, guid: a23f0729a4892914b8447e25b51c23b0, type: 3}
   npcCall:
   - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
   - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  priceUpgrade:
-  - 50
-  - 100
-  - 200
+  maxLevel: 20
+  price: 10
+  priceMultiplier: 1

@@ -26,25 +26,27 @@ public class PromoManager : MonoBehaviour
             //instiatiate all menu from databases
             PromoUi promo = Instantiate(promoPrefab, promoContainer.transform).GetComponent<PromoUi>();
 
+            float spawnSpeed = so.promo[i].currentLvl * so.promo[i].promoObj.addPercentage;
+
             promo.thisShop = so;
             promo.indexMenu = i;
 
             //update menu data in page menu
-            promo.titleText.text = so.promo[i].name;
+            promo.titleText.text = so.promo[i].promoObj.name;
             promo.levelText.text = "Lvl. " + so.promo[i].currentLvl.ToString();
-            promo.descriptionText.text = so.promo[i].description;
-            promo.display.sprite = so.promo[i].display;
+            promo.descriptionText.text = so.promo[i].promoObj.description + " " + spawnSpeed + " " + so.promo[i].promoObj.description2;
+            promo.display.sprite = so.promo[i].promoObj.display;
 
 
-
+            double price = so.promo[i].promoObj.price + ((so.promo[i].currentLvl - 1) * so.promo[i].promoObj.price + so.promo[i].promoObj.priceMultiplier * (so.promo[i].currentLvl - 1));
             //check if level has max
-            if (so.promo[i].currentLvl >= so.promo[i].priceUpgrade.Length)
+            if (so.promo[i].currentLvl >= so.promo[i].promoObj.maxLevel)
             {
                 promo.priceText.text = "Max";
             }
             else
             {
-                promo.priceText.text = SFNuffix.GetShortValue(so.promo[i].priceUpgrade[so.promo[i].currentLvl], 1);
+                promo.priceText.text = SFNuffix.GetShortValue(price);
             }
 
 

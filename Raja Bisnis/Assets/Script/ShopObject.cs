@@ -12,7 +12,6 @@ public class ShopObject : ScriptableObject
     [Header("Level")]
     public int lvlShop = 1;
     public int lvl_Default = 1;
-    public int lvlMax = 5;
 
     [Header("Income")]
     public double incomeShop = 20;
@@ -24,8 +23,19 @@ public class ShopObject : ScriptableObject
     public double bank_Default = 0;
     public double bankMax = 100;
 
+    [Header("Tips")]
+    public float tipsShop = 0;
+    public float tipsDefault = 0;
+
+    [Space(8)]
+    public float tipsChange = 100;
+    public float tipsChangeDefault = 100;
+
     [Header("Serving")]
     public double servingTimeShop = 4;
+
+    [Space(25)]
+    [Header("-------------------------------------------------------------------")]
 
     [Header("Capacity")]
     public List<NpcItem> capacityNPC = new List<NpcItem>();
@@ -33,7 +43,6 @@ public class ShopObject : ScriptableObject
     [Header("Experience")]
     public List<Experience> expShop = new List<Experience>();
 
-    [Space(10)]
     [Header("Menus")]
     public List<Menu> menu = new List<Menu>();
 
@@ -42,11 +51,10 @@ public class ShopObject : ScriptableObject
     //public List<Employee> employee = new List<Employee>();
 
     [Header("Promo")]
-    public List<Promo> promo = new List<Promo>();
+    public List<PromoItem> promo = new List<PromoItem>();
 
-    [Space(10)]
     [Header("Equipment")]
-    public List<Equipment> equipment = new List<Equipment>();
+    public List<EquipmentItem> equipment = new List<EquipmentItem>();
 
     [HideInInspector]public bool hasNewGame = false;
 
@@ -56,8 +64,8 @@ public class ShopObject : ScriptableObject
         incomeShop = 0;
         for (int i = 0; i < menu.Count; i++)
         {
-            if(menu[i].currLevel >= 1)
-                incomeShop += menu[i].upgradeItem[menu[i].currLevel - 1].income;
+            if (menu[i].currLevel >= 1)
+                incomeShop += menu[i].incomeNow;
         }
     }
 
@@ -66,7 +74,11 @@ public class ShopObject : ScriptableObject
         if (!hasNewGame)
         {
             lvlShop = lvl_Default;
+
             incomeShop = incomeShop_Default;
+
+            tipsShop = tipsDefault;
+            tipsChange = tipsChangeDefault;
 
 
 
@@ -80,6 +92,7 @@ public class ShopObject : ScriptableObject
             for (int i = 0; i < menu.Count; i++)
             {
                 menu[i].currLevel = 1;
+                menu[i].incomeNow = menu[i].incomeDefault;
 
                 if (menu[i].locked)
                 {
@@ -97,6 +110,7 @@ public class ShopObject : ScriptableObject
             for (int i = 0; i < promo.Count; i++)
             {
                 promo[i].currentLvl = 1;
+                promo[i].spawnSpeedPercentage = 0;
             }
 
 
@@ -121,6 +135,7 @@ public class Experience
 public class Menu
 {
     public int currLevel = 1;
+    public int maxLevel = 20;
     [Space(10)]
     public string name = "New Menu";
 
@@ -132,15 +147,37 @@ public class Menu
     public bool locked;
     public int levelShopRequire = 0;
 
-    public List<UpgradeItem> upgradeItem = new List<UpgradeItem>();
+
+    [Space(10)]
+    [HideInInspector]public double incomeNow = 2;
+    public double incomeDefault = 2;
+
+    [Header("Income Upgraded")]
+    public double income = 2;
+    public double incomeMultiplier = 1;
+
+    [Space(10)]
+    public double price = 10;
+    public double priceMultiplier = 1;
+}
+
+[System.Serializable]
+public class PromoItem
+{
+    public Promo promoObj;
+    public int currentLvl = 1;
+    [Space(5)]
+    public float spawnSpeedPercentage;
 }
 
 
 [System.Serializable]
-public class UpgradeItem
+public class EquipmentItem
 {
-    public double income = 1000;
-    public double price = 2000;
+    public Equipment equipmentObj;
+    public int currentLvl = 1;
 
 }
+
+
 

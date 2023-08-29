@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class EquipmentUI : MonoBehaviour
 {
-    public Equipment thisEquipment;
+    public EquipmentItem thisEquipment;
     public Image display;
     public TMP_Text levelText;
 

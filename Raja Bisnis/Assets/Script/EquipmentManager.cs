@@ -10,7 +10,7 @@ public class EquipmentManager : MonoBehaviour
     private void Awake() { instance = this; }
 
     [Header("Game Data")]
-    public Equipment selectedEquipment;
+    public EquipmentItem selectedEquipment;
     
     [Header("Scene Component")]
     [SerializeField] private Image display;
@@ -60,8 +60,8 @@ public class EquipmentManager : MonoBehaviour
 
             em.thisEquipment = currentShopSelected.equipment[i];
 
-            if (currentShopSelected.equipment[i].display != null)
-                em.display.sprite = currentShopSelected.equipment[i].display;
+            if (currentShopSelected.equipment[i].equipmentObj.display != null)
+                em.display.sprite = currentShopSelected.equipment[i].equipmentObj.display;
 
             em.levelText.text = currentShopSelected.equipment[i].currentLvl.ToString();
 
@@ -69,42 +69,60 @@ public class EquipmentManager : MonoBehaviour
     }
 
     //view selected equipment
-    public void viewEquipment(Equipment eq)
+    public void viewEquipment(EquipmentItem eq)
     {
         selectedEquipment = eq;
 
-        if (eq.display != null)
-            display.sprite = eq.display;
+        if (eq.equipmentObj.display != null)
+            display.sprite = eq.equipmentObj.display;
 
-        nameText.text = eq.name + " Lvl. " + eq.currentLvl.ToString();
-        descriptionText.text = eq.description;
-        tipsText.text = "+" + eq.upgrade[eq.currentLvl - 1].tip.ToString() + "% Income";
-        tipsChangeText.text = "+" + eq.upgrade[eq.currentLvl - 1].tipChange.ToString() + "% Tips Change";
+        nameText.text = eq.equipmentObj.name + " Lvl. " + eq.currentLvl.ToString();
+        descriptionText.text = eq.equipmentObj.description;
+
 
 
         //check if max equipment level
-        if (selectedEquipment.currentLvl >= selectedEquipment.upgrade.Count)
+        if (eq.currentLvl >= selectedEquipment.equipmentObj.maxLevel)
         {
+            tipsText.text = (eq.equipmentObj.tip * eq.currentLvl - 1) + "% Income";
+            tipsChangeText.text = (eq.equipmentObj.tipChange * eq.currentLvl - 1) + "% Tips Change";
             priceText.text = "Max";
         }else
         {
-            priceText.text = SFNuffix.GetShortValue(eq.upgrade[eq.currentLvl].price);
+            tipsText.text = "+" + (eq.equipmentObj.tip * eq.currentLvl) + "% Income";
+            tipsChangeText.text = "+" + (eq.equipmentObj.tipChange * eq.currentLvl) + "% Tips Change";
+
+            double price = eq.equipmentObj.price + ((eq.currentLvl - 1) * eq.equipmentObj.price + eq.equipmentObj.priceMultiplier * (eq.currentLvl - 1));
+            priceText.text = SFNuffix.GetShortValue(price);
+        }
+        tipsChangeText.gameObject.SetActive(true);
+
+        if (eq.equipmentObj.tipChange <= 0)
+        {
+            tipsChangeText.gameObject.SetActive(false);
         }
     }
 
     public void upgradeEquipment()
     {
         //check if max equipment level
-        if(selectedEquipment.currentLvl < selectedEquipment.upgrade.Count)
+        if(selectedEquipment.currentLvl < selectedEquipment.equipmentObj.maxLevel)
         {
+            EquipmentItem eq = selectedEquipment;
+
+            double price = eq.equipmentObj.price + ((eq.currentLvl - 1) * eq.equipmentObj.price + eq.equipmentObj.priceMultiplier * (eq.currentLvl - 1));
             //check our money
-            if (selectedEquipment.upgrade[selectedEquipment.currentLvl].price <= GameManager.instance.money)
+            if (price <= GameManager.instance.money)
             {
                 //start money animation
                 //
 
-                GameManager.instance.money -= selectedEquipment.upgrade[selectedEquipment.currentLvl].price;
+                GameManager.instance.money -= price;
                 GameManager.instance.UpdateMoney();
+
+
+                currentShopSelected.tipsShop += selectedEquipment.equipmentObj.tip;
+                currentShopSelected.tipsChange += selectedEquipment.equipmentObj.tipChange;
 
                 selectedEquipment.currentLvl += 1;
 

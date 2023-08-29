@@ -50,13 +50,20 @@ public class MenuUI : MonoBehaviour
     public void upgrade()
     {
         //check if level is not max
-        if(thisShop.menu[indexMenu].currLevel < thisShop.menu[indexMenu].upgradeItem.Count)
+        if(thisShop.menu[indexMenu].currLevel < thisShop.menu[indexMenu].maxLevel)
         {
-            double price = thisShop.menu[indexMenu].upgradeItem[thisShop.menu[indexMenu].currLevel].price;
+            double price = thisShop.menu[indexMenu].price + ((thisShop.menu[indexMenu].currLevel - 1) * thisShop.menu[indexMenu].price + thisShop.menu[indexMenu].priceMultiplier * (thisShop.menu[indexMenu].currLevel - 1));
             //check player money
             if (GameManager.instance.money >= price)
             {
+
+                double income = thisShop.menu[indexMenu].income;
+                double incomeMultiplier = thisShop.menu[indexMenu].incomeMultiplier;
+                double nextLevelIncome = income + incomeMultiplier * thisShop.menu[indexMenu].currLevel + 1;
+
+
                 thisShop.menu[indexMenu].currLevel += 1;
+                thisShop.menu[indexMenu].incomeNow += nextLevelIncome;
 
                 NavContent.instance.updateMenu();
                 thisShop.updateData();
@@ -78,7 +85,7 @@ public class MenuUI : MonoBehaviour
         //check if level is locked
         if(thisShop.menu[indexMenu].currLevel == 0)
         {
-            double price = thisShop.menu[indexMenu].upgradeItem[0].price;
+            double price = thisShop.menu[indexMenu].price;
             //check player money
             if (GameManager.instance.money >= price)
             {

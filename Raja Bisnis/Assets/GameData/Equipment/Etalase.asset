@@ -15,11 +15,8 @@ MonoBehaviour:
   nameEquipment: Etalase
   description: Description of equipment
   display: {fileID: 21300000, guid: 96404ac1406d32648a26a4d55655f964, type: 3}
-  currentLvl: 2
-  upgrade:
-  - tip: 2
-    tipChange: 0.4
-    price: 0
-  - tip: 3
-    tipChange: 0.4
-    price: 1000
+  maxLevel: 50
+  tip: 0.1
+  tipChange: 0
+  price: 10
+  priceMultiplier: 1

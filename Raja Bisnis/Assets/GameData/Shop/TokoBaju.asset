@@ -16,46 +16,17 @@ MonoBehaviour:
   displayShop: {fileID: 21300000, guid: 009af987d9ed7c342b0a4f29e0d52295, type: 3}
   lvlShop: 1
   lvl_Default: 1
-  lvlMax: 10
-  incomeShop: 4000
+  incomeShop: 4
   incomeShop_Default: 100
   bankShop: 0
   bank_Default: 0
   bankMax: 100
+  tipsShop: 0
+  tipsDefault: 0
+  tipsChange: 0
+  tipsChangeDefault: 0
   servingTimeShop: 1
-  capacityNPC:
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+  capacityNPC: []
   expShop:
   - exp: 0
     max: 40
@@ -64,31 +35,38 @@ MonoBehaviour:
   - exp: 0
     max: 60
   menu:
-  - currLevel: 2
+  - currLevel: 1
+    maxLevel: 20
     name: kasjldf
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
       remaja
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 0
     levelShopRequire: 0
-    upgradeItem:
-    - income: 500
-      price: 1000
-    - income: 2000
-      price: 2000
-  - currLevel: 2
+    incomeNow: 2
+    incomeDefault: 2
+    income: 2
+    incomeMultiplier: 1
+    price: 10
+    priceMultiplier: 1
+  - currLevel: 1
+    maxLevel: 20
     name: kasjldf
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
       remaja
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 0
     levelShopRequire: 0
-    upgradeItem:
-    - income: 500
-      price: 1000
-    - income: 2000
-      price: 2000
-  promo:
-  - {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
-  equipment: []
+    incomeNow: 2
+    incomeDefault: 2
+    income: 2
+    incomeMultiplier: 1
+    price: 10
+    priceMultiplier: 1
+  promo: []
+  equipment:
+  - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
+    currentLvl: 1
   hasNewGame: 1

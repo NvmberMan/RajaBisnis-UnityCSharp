@@ -37,19 +37,20 @@ public class NavContent : MonoBehaviour
         {
             //instiatiate all menu from databases
             MenuUI menu = Instantiate(menuItemPrefab, menuContainer.transform).GetComponent<MenuUI>();
-            int decrement = 1;
-
-            //check if menu is locked
-            if (so.menu[i].currLevel <= 0)
-            {
-                decrement = 0;
-            }
 
             menu.thisShop = so;
             menu.indexMenu = i;
 
-            string currentIncome = SFNuffix.GetShortValue(so.menu[i].upgradeItem[so.menu[i].currLevel - decrement].income, 1);
-            string nextLevelIncome = so.menu[i].currLevel < so.menu[i].upgradeItem.Count ?  SFNuffix.GetShortValue((so.menu[i].upgradeItem[so.menu[i].currLevel].income) - so.menu[i].upgradeItem[so.menu[i].currLevel - decrement].income, 1) : "";
+            double income = so.menu[i].income;
+            double incomeMultiplier = so.menu[i].incomeMultiplier;
+
+
+            double currentIncome = so.menu[i].incomeNow;
+            double nextLevelIncome = income + incomeMultiplier * so.menu[i].currLevel + 1;
+
+
+            string currentIncomeString = SFNuffix.GetShortValue(currentIncome, 1);
+            string nextLevelIncomeString = SFNuffix.GetShortValue(nextLevelIncome, 1);
 
             //update menu data in page menu
             menu.nameText.text = so.menu[i].name;
@@ -60,23 +61,25 @@ public class NavContent : MonoBehaviour
 
 
             menu.isLocked = so.menu[i].locked;
-            menu.unlockPrice = so.menu[i].upgradeItem[0].price;
+            menu.unlockPrice = so.menu[i].price;
             menu.display.sprite = so.menu[i].display;
 
 
 
             //check if level has max
-            if (so.menu[i].currLevel >= so.menu[i].upgradeItem.Count)
+            if (so.menu[i].currLevel >= so.menu[i].maxLevel)
             {
                 menu.priceText.text = "Max";
-                menu.incomeText.text = currentIncome;
+                menu.incomeText.text = currentIncomeString;
             }
             else
             {
-                menu.incomeText.text = currentIncome + "<color=#" + ColorUtility.ToHtmlStringRGB(highlightColor) +
-                "> + " + nextLevelIncome + "</color>";
+                menu.incomeText.text = currentIncomeString + "<color=#" + ColorUtility.ToHtmlStringRGB(highlightColor) +
+                "> + " + nextLevelIncomeString + "</color>";
 
-                menu.priceText.text = SFNuffix.GetShortValue(so.menu[i].upgradeItem[so.menu[i].currLevel].price, 1);
+
+                double price = so.menu[i].price + ((so.menu[i].currLevel - 1) * so.menu[i].price + so.menu[i].priceMultiplier * (so.menu[i].currLevel - 1));
+                menu.priceText.text = SFNuffix.GetShortValue(price);
 
             }
 

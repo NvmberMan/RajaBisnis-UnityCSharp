@@ -14,42 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameShop: Ayam Geprek
   displayShop: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-  lvlShop: 10
-  lvl_Default: 10
-  lvlMax: 10
-  incomeShop: 5000
-  incomeShop_Default: 20
+  lvlShop: 1
+  lvl_Default: 1
+  incomeShop: 3
+  incomeShop_Default: 0
   bankShop: 0
   bank_Default: 0
   bankMax: 100
+  tipsShop: 1
+  tipsDefault: 1
+  tipsChange: 1
+  tipsChangeDefault: 1
   servingTimeShop: 1
   capacityNPC:
   - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
   - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
   - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
   expShop:
   - exp: 0
@@ -74,75 +53,26 @@ MonoBehaviour:
     max: 60
   menu:
   - currLevel: 1
+    maxLevel: 20
     name: Ayam Geprek
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
       remaja
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 0
     levelShopRequire: 0
-    upgradeItem:
-    - income: 2000
-      price: 0
-    - income: 4000
-      price: 1000
-    - income: 5000
-      price: 2000
-  - currLevel: 1
-    name: Ayam Geprek + Sambal
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
-    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-    locked: 0
-    levelShopRequire: 0
-    upgradeItem:
-    - income: 3000
-      price: 80000
-  - currLevel: 0
-    name: Ayam Geprek + Sambal
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
-    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-    locked: 1
-    levelShopRequire: 5
-    upgradeItem:
-    - income: 3000
-      price: 80000
-  - currLevel: 0
-    name: Ayam Geprek + Sambal
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
-    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-    locked: 1
-    levelShopRequire: 10
-    upgradeItem:
-    - income: 3000
-      price: 80000
-  - currLevel: 0
-    name: Ayam Geprek + Sambal
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
-    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-    locked: 1
-    levelShopRequire: 15
-    upgradeItem:
-    - income: 3000
-      price: 80000
-    - income: 5000
-      price: 80000
-  - currLevel: 0
-    name: Ayam Geprek + Sambal
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
-    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-    locked: 1
-    levelShopRequire: 20
-    upgradeItem:
-    - income: 3000
-      price: 80000
+    incomeNow: 3
+    incomeDefault: 3
+    income: 0
+    incomeMultiplier: 1
+    price: 10
+    priceMultiplier: 1
   promo:
-  - {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
-  - {fileID: 11400000, guid: be5768d3f82c1be469183bc3b6e5fa12, type: 2}
+  - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
+    currentLvl: 3
+    spawnSpeedPercentage: 0.2
   equipment:
-  - {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
-  - {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
+  - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
+    currentLvl: 1
   hasNewGame: 1

@@ -30,12 +30,13 @@ public class PromoUi : MonoBehaviour
     public void upgrade()
     {
         //check if level is not max
-        if (thisShop.promo[indexMenu].currentLvl < thisShop.promo[indexMenu].priceUpgrade.Length)
+        if (thisShop.promo[indexMenu].currentLvl < thisShop.promo[indexMenu].promoObj.maxLevel)
         {
-            double price = thisShop.promo[indexMenu].priceUpgrade[thisShop.promo[indexMenu].currentLvl];
+            double price = thisShop.promo[indexMenu].promoObj.price + ((thisShop.promo[indexMenu].currentLvl - 1) * thisShop.promo[indexMenu].promoObj.price + thisShop.promo[indexMenu].promoObj.priceMultiplier * (thisShop.promo[indexMenu].currentLvl - 1));
             //check player money
             if (GameManager.instance.money >= price)
             {
+                thisShop.promo[indexMenu].spawnSpeedPercentage = thisShop.promo[indexMenu].promoObj.addPercentage * thisShop.promo[indexMenu].currentLvl;
                 thisShop.promo[indexMenu].currentLvl += 1;
 
                 PromoManager.instance.updatePromo();
