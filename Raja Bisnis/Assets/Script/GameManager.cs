@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     [Header("System UI")]
     [SerializeField] private Canvas canvas;
-    [SerializeField] private Canvas canvasGame;
+    [SerializeField] public Canvas canvasGame;
 
     [Space(5)]
     [SerializeField] private TMP_Text moneyText;
