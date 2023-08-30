@@ -27,9 +27,8 @@ MonoBehaviour:
   tipsChangeDefault: 1
   servingTimeShop: 1
   capacityNPC:
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
   expShop:
   - exp: 0
     max: 40
@@ -54,22 +53,92 @@ MonoBehaviour:
   menu:
   - currLevel: 1
     maxLevel: 20
-    name: Ayam Geprek
+    name: Ayam Ge-press
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
       remaja
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 0
     levelShopRequire: 0
     incomeNow: 3
+    incomeDefault: 1
+    income: 0
+    incomeMultiplier: 5
+    price: 10
+    priceMultiplier: 1
+  - currLevel: 0
+    maxLevel: 20
+    name: Ayam Ge-Press Telur Asin
+    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
+      remaja
+    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
+    locked: 1
+    levelShopRequire: 10
+    incomeNow: 3
     incomeDefault: 3
     income: 0
-    incomeMultiplier: 1
+    incomeMultiplier: 7
+    price: 10
+    priceMultiplier: 1
+  - currLevel: 0
+    maxLevel: 20
+    name: Ayam kriuk Sambal Matah
+    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
+      remaja
+    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
+    locked: 1
+    levelShopRequire: 20
+    incomeNow: 3
+    incomeDefault: 3
+    income: 0
+    incomeMultiplier: 10
+    price: 10
+    priceMultiplier: 1
+  - currLevel: 0
+    maxLevel: 20
+    name: Ayam kriuk Sambal Hot Sauce
+    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
+      remaja
+    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
+    locked: 1
+    levelShopRequire: 30
+    incomeNow: 3
+    incomeDefault: 3
+    income: 0
+    incomeMultiplier: 13
+    price: 10
+    priceMultiplier: 1
+  - currLevel: 0
+    maxLevel: 20
+    name: Winger set + Mozza
+    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
+      remaja
+    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
+    locked: 1
+    levelShopRequire: 40
+    incomeNow: 3
+    incomeDefault: 3
+    income: 0
+    incomeMultiplier: 16
+    price: 10
+    priceMultiplier: 1
+  - currLevel: 0
+    maxLevel: 20
+    name: Ayam Ge-Press Sambal Cabai Hantu
+    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
+      remaja
+    display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
+    locked: 1
+    levelShopRequire: 50
+    incomeNow: 3
+    incomeDefault: 3
+    income: 0
+    incomeMultiplier: 20
     price: 10
     priceMultiplier: 1
   promo:
   - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
-    currentLvl: 3
-    spawnSpeedPercentage: 0.2
+    currentLvl: 1
+    spawnSpeedPercentage: 0
   equipment:
   - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
     currentLvl: 1
