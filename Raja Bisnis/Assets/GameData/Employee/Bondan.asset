@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856fc3540f0f4ce48bbce91c70bf6427, type: 3}
+  m_Name: Bondan
+  m_EditorClassIdentifier: 
+  nameEmployee: Bondan
+  display: {fileID: 21300000, guid: 009af987d9ed7c342b0a4f29e0d52295, type: 3}
+  currentLvl: 1
+  serveSpeed: 20
+  restSpeed: 69.1
+  stamina: 33
+  attitude: 9
