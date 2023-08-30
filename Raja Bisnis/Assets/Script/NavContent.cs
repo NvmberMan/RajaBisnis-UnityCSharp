@@ -10,11 +10,41 @@ public class NavContent : MonoBehaviour
     public Color highlightColor;
 
     public Transform menuContainer;
+    public Transform cardContainer;
     public GameObject menuItemPrefab;
 
     void Start()
     {
+        updateCard();
+    }
 
+    public void updateCard()
+    {
+        Debug.Log(RukoManager.instance.shopScenes.Count);
+        foreach(Transform child in cardContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        for (int i = 0; i < RukoManager.instance.shopObjects.Length; i++)
+        {
+            CardItem card = Instantiate(RukoManager.instance.shopObjects[i].cardPrefab, cardContainer.transform).GetComponent<CardItem>();
+            if (i > RukoManager.instance.shopScenes.Count)
+            {
+                card.locked = true;
+            }else
+            {
+                card.locked = false;
+            }
+
+            for (int g = 0; g < RukoManager.instance.shopScenes.Count; g++)
+            {
+                if (RukoManager.instance.shopScenes[g].shop.thisObject == card.shopObject)
+                {
+                    card.used = true;
+                }
+            }
+        }
     }
 
     // Update is called once per frame

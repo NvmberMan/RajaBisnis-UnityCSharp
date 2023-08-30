@@ -7,6 +7,9 @@ using UnityEngine;
 public class ShopObject : ScriptableObject
 {
     public string nameShop = "Toko ...";
+    public double buyPrice = 3000;
+    public GameObject shopPrefab;
+    public GameObject cardPrefab;
     public Sprite displayShop;
 
     [Header("Level")]
@@ -16,7 +19,6 @@ public class ShopObject : ScriptableObject
     [Header("Income")]
     public double incomeShop = 20;
     public double incomeShop_Default = 20;
-
 
     [Header("Bank")]
     public double bankShop = 0;

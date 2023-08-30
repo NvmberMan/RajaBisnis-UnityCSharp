@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Jus&Smoothie
   m_EditorClassIdentifier: 
   nameShop: Jus&Smoothie
+  buyPrice: 3000
+  shopPrefab: {fileID: 6617531203495822946, guid: 466bedd48740ea847bb8de3815b88f9e, type: 3}
+  cardPrefab: {fileID: 8793468854756001941, guid: 3bdc7d4fad4237e43946e04426ffd33c, type: 3}
   displayShop: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
   lvlShop: 1
   lvl_Default: 1

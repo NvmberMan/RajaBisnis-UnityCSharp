@@ -20,7 +20,13 @@ public class Shop : MonoBehaviour
     public virtual void setShop()
     {
         //add shop gameobject to rukomanager
-        RukoManager.instance.shopScenes.Add(this.gameObject.GetComponent<Shop>());
+        ShopScene ss = new ShopScene();
+        ss.shop = this.gameObject.GetComponent<Shop>();
+        ss.indexOrder = transform.GetSiblingIndex();
+
+        RukoManager.instance.shopScenes.Add(ss);
+
+
         gm = GameManager.instance;
 
 
@@ -29,6 +35,8 @@ public class Shop : MonoBehaviour
         {
             StartCoroutine(spawnNpc(i));
         }
+
+
     }
 
     public virtual void servingSystem()

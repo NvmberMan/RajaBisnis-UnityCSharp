@@ -35,10 +35,10 @@ public class Npc : MonoBehaviour
             for (int i = 0; i < rm.shopScenes.Count; i++)
             {
 
-                if (rm.shopScenes[i].thisObject == targetShop)
+                if (rm.shopScenes[i].shop.thisObject == targetShop)
                 {
                     //checking distance of shop with npc
-                    sh = rm.shopScenes[i];
+                    sh = rm.shopScenes[i].shop;
                     target = sh.targetPoint[Random.Range(0, sh.targetPoint.Length)];
                     doorTarget = sh.doorPoint[Random.Range(0, sh.doorPoint.Length)];
 

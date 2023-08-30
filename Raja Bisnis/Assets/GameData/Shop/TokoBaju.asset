@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: TokoBaju
   m_EditorClassIdentifier: 
   nameShop: Toko Baju
+  buyPrice: 3000
+  shopPrefab: {fileID: 5856499688692236673, guid: 4490c6063cc6b8d46b94ca95d3012e7d, type: 3}
+  cardPrefab: {fileID: 4412683064279578136, guid: 0cb4e4bd5315e9d4f8fa378df8d45986, type: 3}
   displayShop: {fileID: 21300000, guid: 009af987d9ed7c342b0a4f29e0d52295, type: 3}
   lvlShop: 1
   lvl_Default: 1

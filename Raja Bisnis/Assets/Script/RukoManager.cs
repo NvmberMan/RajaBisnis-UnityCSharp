@@ -15,7 +15,8 @@ public class RukoManager : MonoBehaviour
 
     [Space(10)]
     public ShopObject[] shopObjects;
-    public List<Shop> shopScenes = new List<Shop>();
+    public List<ShopScene> shopScenes = new List<ShopScene>();
+    public List<ShopEmpty> shopEmpty = new List<ShopEmpty>();
 
 
     void Start()
@@ -24,6 +25,9 @@ public class RukoManager : MonoBehaviour
         {
             shopObjects[i].hasNewGame = false;
         }
+
+        updateEmptyShop();
+ 
 
         if (newGame)
         {
@@ -41,9 +45,46 @@ public class RukoManager : MonoBehaviour
 
     }
 
+    public void updateEmptyShop()
+    {
+        shopEmpty.Clear();
+
+        foreach (Transform child in CanvasManager.instance.shopContainer.transform)
+        {
+            if (child.GetComponent<EmptyShop>())
+            {
+
+                    ShopEmpty ss = new ShopEmpty();
+                    ss.shop = child.GetComponent<EmptyShop>();
+                    ss.indexOrder = child.GetSiblingIndex();
+
+                    shopEmpty.Add(ss);
+                
+
+            }
+
+        }
+
+    }
+
     void Update()
     {
  
     }
 
+}
+
+[System.Serializable]
+public class ShopScene
+{
+    public Shop shop;
+    public int indexOrder;
+}
+
+
+[System.Serializable]
+public class ShopEmpty
+{
+    public EmptyShop shop;
+    public int indexOrder;
 }
