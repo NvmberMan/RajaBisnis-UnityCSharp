@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f84108e65b07f40b557b01627a8f37, type: 3}
   m_Name: Asep
   m_EditorClassIdentifier: 
+  spawnMinTime: 6
+  spawnMaxTime: 10
   prefabs: {fileID: 2938902565662337974, guid: 2b93995d9ce15e94ba737bca1825d2f1, type: 3}

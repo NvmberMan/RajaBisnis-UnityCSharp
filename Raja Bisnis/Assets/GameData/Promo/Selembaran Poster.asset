@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f84108e65b07f40b557b01627a8f37, type: 3}
-  m_Name: Narie
+  m_Script: {fileID: 11500000, guid: 730fc408acc1fcd4e9d20a2078d34014, type: 3}
+  m_Name: Selembaran Poster
   m_EditorClassIdentifier: 
-  spawnMinTime: 6
-  spawnMaxTime: 10
-  prefabs: {fileID: 2938902565662337974, guid: 3924bec3c2a658742a6d12f2c66d3199, type: 3}
+  description: Memanggil Orang Orang Dewasa
+  description2: detik lebih cepat
+  addPercentage: 0.1
+  display: {fileID: 0}
+  npcCall: []
+  maxLevel: 20
+  price: 20
+  priceMultiplier: 1

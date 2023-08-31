@@ -24,9 +24,9 @@ MonoBehaviour:
   bankShop: 0
   bank_Default: 0
   bankMax: 100
-  tipsShop: 1
+  tipsShop: 1.7000002
   tipsDefault: 1
-  tipsChange: 1
+  tipsChange: 7
   tipsChangeDefault: 1
   servingTimeShop: 1
   capacityNPC: []
@@ -52,11 +52,11 @@ MonoBehaviour:
   - exp: 0
     max: 60
   menu:
-  - currLevel: 1
+  - currLevel: 3
     maxLevel: 20
     name: Ayam Ge-press
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Masakan Siap Saji yang cukup populer di era baru ini daan cukup
+      terkenal di banyak kalangan
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 0
     levelShopRequire: 0
@@ -65,84 +65,84 @@ MonoBehaviour:
     income: -1
     incomeMultiplier: 1
     price: 10
-    priceMultiplier: 1
+    priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
     name: Ayam Ge-Press Telur Asin
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: 'Ayam Ge-Press yang ditambahkan sambal telur asin yang dapat memunculkan
+      rasa baru pada konsumen '
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     levelShopRequire: 10
     incomeNow: 3
     incomeDefault: 3
     income: 0
-    incomeMultiplier: 7
-    price: 10
-    priceMultiplier: 1
+    incomeMultiplier: 3
+    price: 300
+    priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
     name: Ayam kriuk Sambal Matah
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Ayam yang dimasak dengan tepung sehingga menjadi renyah dan tambahan
+      sambal matah yang menjadi ciri khas
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     levelShopRequire: 20
     incomeNow: 3
     incomeDefault: 3
     income: 0
-    incomeMultiplier: 10
-    price: 10
-    priceMultiplier: 1
+    incomeMultiplier: 5
+    price: 450
+    priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
     name: Ayam kriuk Sambal Hot Sauce
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Layaknya ayam Kriuk  namun dengan tambahan sambal hot saus yang
+      terkenal dengan lvl pedasnya
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     levelShopRequire: 30
     incomeNow: 3
     incomeDefault: 3
     income: 0
-    incomeMultiplier: 13
-    price: 10
-    priceMultiplier: 1
+    incomeMultiplier: 7
+    price: 500
+    priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
     name: Winger set + Mozza
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Set sayap yang dimasak dengan tepung dan tambahan saus mozzarella
+      yang gurih gurih nyoi
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     levelShopRequire: 40
     incomeNow: 3
     incomeDefault: 3
     income: 0
-    incomeMultiplier: 16
-    price: 10
-    priceMultiplier: 1
+    incomeMultiplier: 9
+    price: 650
+    priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
     name: Ayam Ge-Press Sambal Cabai Hantu
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Versi terpedas dari ayam Ge-Press dan terkenal dengan cabainya 
+      Peringatan:Dapat membuat stay in toilet
     display: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
     locked: 1
     levelShopRequire: 50
     incomeNow: 3
     incomeDefault: 3
     income: 0
-    incomeMultiplier: 20
-    price: 10
-    priceMultiplier: 1
+    incomeMultiplier: 11
+    price: 700
+    priceMultiplier: 2
   promo:
   - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
     currentLvl: 1
     spawnSpeedPercentage: 0
   equipment:
   - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
-    currentLvl: 1
+    currentLvl: 2
   - equipmentObj: {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
-    currentLvl: 1
+    currentLvl: 7
   hasNewGame: 1
