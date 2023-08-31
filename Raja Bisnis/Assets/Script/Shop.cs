@@ -12,7 +12,6 @@ public class Shop : MonoBehaviour
     [Space(10)]
     public ShopObject thisObject;
     public Transform[] targetPoint;
-    public Transform[] doorPoint;
     public Transform uiTransform;
 
     GameManager gm;
@@ -52,7 +51,7 @@ public class Shop : MonoBehaviour
                 //thisObject.capacityShop -= 1;
                 //npc exit from shop
                 NpcItem ni = thisObject.capacityNPC[0];
-                Npc npc = Instantiate(ni.prefabs, doorPoint[Random.Range(0, doorPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
+                Npc npc = Instantiate(ni.prefabs, targetPoint[Random.Range(0, targetPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
                 npc.roadTarget = targetPoint[Random.Range(0, targetPoint.Length)];
 
                 int randomDirection = Random.Range(0, 100);

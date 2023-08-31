@@ -40,7 +40,6 @@ public class Npc : MonoBehaviour
                     //checking distance of shop with npc
                     sh = rm.shopScenes[i].shop;
                     target = sh.targetPoint[Random.Range(0, sh.targetPoint.Length)];
-                    doorTarget = sh.doorPoint[Random.Range(0, sh.doorPoint.Length)];
 
                     break;
                 }
@@ -85,11 +84,16 @@ public class Npc : MonoBehaviour
             //check distance between player with frontpoint
              dist = Vector2.Distance(target.position, transform.position);
 
-             if (dist <= 2)
+             if (dist <= 1)
              {
-                 goToTarget = true;
-                 stopWalking = true;
-             }
+                //goToTarget = true;
+                //stopWalking = true;
+
+                sh.thisObject.capacityNPC.Add(thisNpc);
+
+                Destroy(this.gameObject);
+                insideShop = true;
+            }
             
 
         }
@@ -97,28 +101,28 @@ public class Npc : MonoBehaviour
     }
 
     bool insideShop = false;
-    public virtual void NpcWalkToShop()
-    {
-        rectTransform = GetComponent<RectTransform>();
-        doorRect = doorTarget.GetComponent<RectTransform>();
-        rectTransform.position = Vector2.MoveTowards(transform.position, doorTarget.position, 4 * Time.deltaTime);
+    //public virtual void NpcWalkToShop()
+    //{
+    //    rectTransform = GetComponent<RectTransform>();
+    //    doorRect = doorTarget.GetComponent<RectTransform>();
+    //    rectTransform.position = Vector2.MoveTowards(transform.position, doorTarget.position, 4 * Time.deltaTime);
 
-        anim.Play("Walk_Front");
+    //    anim.Play("Walk_Front");
 
-        //check distance between player with door
-        if (Vector2.Distance(transform.position, doorTarget.position) < 1 && !insideShop)
-        {
-            //Menu m = targetShop.menu[Random.Range(0,targetShop.menu.Count)];
-            //UpgradeItem up = m.upgradeItem[m.currLevel - 1];
+    //    //check distance between player with door
+    //    if (Vector2.Distance(transform.position, doorTarget.position) < 1 && !insideShop)
+    //    {
+    //        //Menu m = targetShop.menu[Random.Range(0,targetShop.menu.Count)];
+    //        //UpgradeItem up = m.upgradeItem[m.currLevel - 1];
 
-            //GameManager.instance.GetMoney(up.income, "popup");
+    //        //GameManager.instance.GetMoney(up.income, "popup");
 
-            sh.thisObject.capacityNPC.Add(thisNpc);
+    //        sh.thisObject.capacityNPC.Add(thisNpc);
 
-            Destroy(this.gameObject);
-            insideShop = true;
-        }
-    }
+    //        Destroy(this.gameObject);
+    //        insideShop = true;
+    //    }
+    //}
 
 
     public void NpcBackToRoad()
