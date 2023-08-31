@@ -19,6 +19,8 @@ public class SelectionShop : MonoBehaviour
         GameManager.instance.currentShopSelected = shopObject;
         GameManager.instance.updateRukoManager();
 
+        NavContent.instance.updateMenu();
+
         CanvasManager.instance.GetComponent<Animator>().Play("NavScroll_Open_From_Choose");
         GameManager.instance.canvasGame.GetComponent<Animator>().Play("CanvasGame_Up_High");
     }
