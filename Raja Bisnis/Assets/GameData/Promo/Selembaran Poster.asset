@@ -16,7 +16,8 @@ MonoBehaviour:
   description2: detik lebih cepat
   addPercentage: 0.1
   display: {fileID: 0}
-  npcCall: []
+  npcCall:
+  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
   maxLevel: 20
   price: 20
   priceMultiplier: 1

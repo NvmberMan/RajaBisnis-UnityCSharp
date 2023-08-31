@@ -19,7 +19,7 @@ MonoBehaviour:
   displayShop: {fileID: 21300000, guid: 009af987d9ed7c342b0a4f29e0d52295, type: 3}
   lvlShop: 1
   lvl_Default: 1
-  incomeShop: 4
+  incomeShop: 2
   incomeShop_Default: 100
   bankShop: 0
   bank_Default: 0
@@ -29,7 +29,8 @@ MonoBehaviour:
   tipsChange: 0
   tipsChangeDefault: 0
   servingTimeShop: 1
-  capacityNPC: []
+  capacityNPC:
+  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
   expShop:
   - exp: 0
     max: 40
@@ -52,7 +53,7 @@ MonoBehaviour:
     incomeMultiplier: 1
     price: 10
     priceMultiplier: 1
-  - currLevel: 1
+  - currLevel: 0
     maxLevel: 20
     name: Shirt
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
@@ -66,7 +67,7 @@ MonoBehaviour:
     incomeMultiplier: 2
     price: 50
     priceMultiplier: 2
-  - currLevel: 1
+  - currLevel: 0
     maxLevel: 20
     name: Sweather
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
@@ -80,7 +81,7 @@ MonoBehaviour:
     incomeMultiplier: 2
     price: 100
     priceMultiplier: 2
-  - currLevel: 1
+  - currLevel: 0
     maxLevel: 20
     name: Jacket
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
@@ -94,7 +95,7 @@ MonoBehaviour:
     incomeMultiplier: 2
     price: 150
     priceMultiplier: 2
-  - currLevel: 1
+  - currLevel: 0
     maxLevel: 20
     name: Sling & mini bag
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
@@ -108,7 +109,7 @@ MonoBehaviour:
     incomeMultiplier: 2
     price: 200
     priceMultiplier: 2
-  - currLevel: 1
+  - currLevel: 0
     maxLevel: 20
     name: Suit Man & Women
     description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
@@ -122,7 +123,10 @@ MonoBehaviour:
     incomeMultiplier: 2
     price: 225
     priceMultiplier: 2
-  promo: []
+  promo:
+  - promoObj: {fileID: 11400000, guid: eb7f3ee145f270d499b0d9988d7769c8, type: 2}
+    currentLvl: 1
+    spawnSpeedPercentage: 0
   equipment:
   - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
     currentLvl: 1
