@@ -12,7 +12,7 @@ public class Npc : MonoBehaviour
 
     [HideInInspector]public Vector2 walkingDirection;
     [HideInInspector] public bool stopWalking, goToTarget;
-    [HideInInspector]public NpcItem thisNpc;
+    [HideInInspector] public NpcItem thisNpc;
     [HideInInspector]public Transform roadTarget;
 
     private RectTransform rectTransform, doorRect;

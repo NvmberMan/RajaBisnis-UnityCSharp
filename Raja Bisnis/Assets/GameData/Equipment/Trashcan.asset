@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameEquipment: etalase
   description: Description of equipment
-  display: {fileID: 21300000, guid: 96404ac1406d32648a26a4d55655f964, type: 3}
+  display: {fileID: 21300000, guid: 26782942917f45c4db2e8fda914ddf53, type: 3}
   maxLevel: 50
   tip: 0.3
   tipChange: 1

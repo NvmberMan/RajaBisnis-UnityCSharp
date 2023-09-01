@@ -24,9 +24,9 @@ MonoBehaviour:
   bankShop: 0
   bank_Default: 0
   bankMax: 100
-  tipsShop: 1.7000002
+  tipsShop: 1
   tipsDefault: 1
-  tipsChange: 7
+  tipsChange: 1
   tipsChangeDefault: 1
   servingTimeShop: 1
   capacityNPC: []
@@ -52,7 +52,7 @@ MonoBehaviour:
   - exp: 0
     max: 60
   menu:
-  - currLevel: 3
+  - currLevel: 1
     maxLevel: 20
     name: Ayam Ge-press
     description: Masakan Siap Saji yang cukup populer di era baru ini daan cukup
@@ -140,9 +140,12 @@ MonoBehaviour:
   - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
     currentLvl: 1
     spawnSpeedPercentage: 0
+  - promoObj: {fileID: 11400000, guid: c4c0fc422cffd704c9737133ae4ba6c2, type: 2}
+    currentLvl: 1
+    spawnSpeedPercentage: 0
   equipment:
   - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
-    currentLvl: 2
+    currentLvl: 1
   - equipmentObj: {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
-    currentLvl: 7
+    currentLvl: 1
   hasNewGame: 1

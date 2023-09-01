@@ -50,9 +50,12 @@ public class Shop : MonoBehaviour
 
                 //thisObject.capacityShop -= 1;
                 //npc exit from shop
-                NpcItem ni = thisObject.capacityNPC[0];
+                NpcItem ni = thisObject.capacityNPC[Random.Range(0, thisObject.capacityNPC.Count)];
                 Npc npc = Instantiate(ni.prefabs, targetPoint[Random.Range(0, targetPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
                 npc.roadTarget = targetPoint[Random.Range(0, targetPoint.Length)];
+                npc.thisNpc = ni;
+                thisObject.expShop[thisObject.lvlShop - 1].exp += npc.thisNpc.experienceCounter;
+                GameManager.instance.updateExpererience();
 
                 int randomDirection = Random.Range(0, 100);
 
