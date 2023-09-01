@@ -42,8 +42,8 @@ MonoBehaviour:
   - currLevel: 1
     maxLevel: 20
     name: T-shirt
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Baju Kaos simple dan sedehana dengan bahan yang cukup nyaman untuk
+      digunakan
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 0
     levelShopRequire: 0
@@ -56,8 +56,7 @@ MonoBehaviour:
   - currLevel: 0
     maxLevel: 20
     name: Shirt
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Sebuah kemeja panjang yng dapat digunakan untuk bebrapa acara tertentu
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 1
     levelShopRequire: 15
@@ -70,8 +69,8 @@ MonoBehaviour:
   - currLevel: 0
     maxLevel: 20
     name: Sweather
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Sebuah outer layer dari pakaian yang biasa di gunnakan untuk menghanghangatkan
+      badan
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 1
     levelShopRequire: 30
@@ -84,8 +83,8 @@ MonoBehaviour:
   - currLevel: 0
     maxLevel: 20
     name: Jacket
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: jacket salah satu outer outfit yang bisa digunakan di berbagai acara,event,
+      dan sebagainya
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 1
     levelShopRequire: 45
@@ -98,8 +97,8 @@ MonoBehaviour:
   - currLevel: 0
     maxLevel: 20
     name: Sling & mini bag
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Sebuah tas yang menjadi salah satu fashionable yang sering dipakai
+      secara fleksible
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 1
     levelShopRequire: 60
@@ -112,8 +111,8 @@ MonoBehaviour:
   - currLevel: 0
     maxLevel: 20
     name: Suit Man & Women
-    description: Ayam geprek adalah makanan khas bogor yang sangat populer dikalangan
-      remaja
+    description: Pakaian yang sangat di butuhkan di acara formal dan juga sering
+      di gunakan di beberapa perusahaan tinggi
     display: {fileID: 21300000, guid: 47da9027bb07d79428ad9c4ea4a901eb, type: 3}
     locked: 1
     levelShopRequire: 75
@@ -132,4 +131,10 @@ MonoBehaviour:
     currentLvl: 1
   - equipmentObj: {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
     currentLvl: 1
-  hasNewGame: 1
+  - equipmentObj: {fileID: 11400000, guid: 6d55dc6f7ffae2b4c9f9b38a90821380, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: 55bf88b5ff6658448b2cb17cb79ecb7d, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: d0719bdd1877a5c4788f64314dd18342, type: 2}
+    currentLvl: 1
+  hasNewGame: 0
