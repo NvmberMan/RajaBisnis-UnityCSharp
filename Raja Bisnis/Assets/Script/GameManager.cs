@@ -185,23 +185,31 @@ public class GameManager : MonoBehaviour
 
     public void updateExpererience()
     {
-        int max = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].max;
-        int exp = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp;
-        int sisa = 0;
-
-        if(exp >= max)
+        if(currentShopSelected.lvlShop <= currentShopSelected.expShop.Count)
         {
-            sisa = exp - max;
-            currentShopSelected.lvlShop += 1;
-            currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp += sisa;
+            int max = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].max;
+            int exp = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp;
+            int sisa = 0;
+
+            if (exp >= max)
+            {
+                sisa = exp - max;
+                currentShopSelected.lvlShop += 1;
+                currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp += sisa;
+
+                NavContent.instance.updateMenu();
+            }
+
+            experienceSlider.maxValue = max;
+            experienceSlider.value = exp;
+
+            lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
         }
 
-        experienceSlider.maxValue = max;
-        experienceSlider.value = exp;
-
-        lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
 
     }
+
+
 
     public void showAlert(string text, float delay = 2)
     {

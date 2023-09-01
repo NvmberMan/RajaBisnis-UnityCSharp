@@ -48,20 +48,32 @@ public class CanvasManager : MonoBehaviour
     public void unlockEmptyShop()
     {
         if(selectedEmpty)
-            selectedEmpty.unlock();
-
-        closeLockedMenu();
-        Invoke("openSetShop", 0.25f);
-
-        foreach(Transform child in shopContainer.transform)
         {
-            if(child.gameObject.GetComponent<EmptyShop>())
+            if (selectedEmpty.price <= GameManager.instance.money)
             {
-                child.gameObject.GetComponent<EmptyShop>().updatePrice();
+                GameManager.instance.money -= selectedEmpty.price;
+                selectedEmpty.unlock();
+
+                closeLockedMenu();
+                Invoke("openSetShop", 0.25f);
+
+                RukoManager.instance.shopBuy++;
+                foreach (Transform child in shopContainer.transform)
+                {
+                    if (child.gameObject.GetComponent<EmptyShop>())
+                    {
+                        child.gameObject.GetComponent<EmptyShop>().updatePrice();
+                    }
+                }
+
+                RukoManager.instance.updateEmptyShop();
+            }
+            else
+            {
+                GameManager.instance.showAlert("Uang Kamu Tidak Cukup", 3);
             }
         }
 
-        RukoManager.instance.updateEmptyShop();
     }
 
     //Set Shop To Empty Shop

@@ -12,7 +12,7 @@ public class RukoManager : MonoBehaviour
     public bool newGame;
 
 
-
+    public int shopBuy = 0;
     [Space(10)]
     public ShopObject[] shopObjects;
     public List<ShopScene> shopScenes = new List<ShopScene>();

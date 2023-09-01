@@ -40,7 +40,7 @@ public class ShopObject : ScriptableObject
     [Header("-------------------------------------------------------------------")]
 
     [Header("Capacity")]
-    public List<NpcItem> capacityNPC = new List<NpcItem>();
+    public List<CapacityItem> capacityNPC = new List<CapacityItem>();
 
     [Header("Experience")]
     public List<Experience> expShop = new List<Experience>();
@@ -130,6 +130,15 @@ public class Experience
 {
     public int exp;
     public int max;
+}
+
+
+[System.Serializable]
+public class CapacityItem
+{
+    public NpcItem npc;
+    [Range(0, 5)]
+    public float counter;
 }
 
 

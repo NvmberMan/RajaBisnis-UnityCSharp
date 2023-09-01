@@ -7,7 +7,6 @@ public class Shop : MonoBehaviour
 {
     [Header("Serve System")]
     [Range(0, 5)]
-    public float serveCounter;
 
     [Space(10)]
     public ShopObject thisObject;
@@ -43,55 +42,67 @@ public class Shop : MonoBehaviour
         //check if shop is has a customer
         if(thisObject.capacityNPC.Count > 0)
         {
-            serveCounter += (float)thisObject.servingTimeShop * Time.deltaTime;
-            if (serveCounter >= 5)
+            for (int i = 0; i < thisObject.capacityNPC.Count; i++)
             {
-                serveCounter = 0;
-
-                //thisObject.capacityShop -= 1;
-                //npc exit from shop
-                NpcItem ni = thisObject.capacityNPC[Random.Range(0, thisObject.capacityNPC.Count)];
-                Npc npc = Instantiate(ni.prefabs, targetPoint[Random.Range(0, targetPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
-                npc.roadTarget = targetPoint[Random.Range(0, targetPoint.Length)];
-                npc.thisNpc = ni;
-                thisObject.expShop[thisObject.lvlShop - 1].exp += npc.thisNpc.experienceCounter;
-                GameManager.instance.updateExpererience();
-
-                int randomDirection = Random.Range(0, 100);
-
-                if (randomDirection > 50)
+                thisObject.capacityNPC[i].counter += (float)thisObject.servingTimeShop * Time.deltaTime;
+                if (thisObject.capacityNPC[i].counter >= 5)
                 {
-                    npc.walkingDirection = Vector2.right;
-                    npc.transform.localScale = new Vector2(-npc.transform.localScale.x, npc.transform.localScale.y);
-                    npc.transform.SetParent(GameManager.instance.npcLeftPoint);
-                }
-                else
-                {
-                    npc.walkingDirection = Vector2.left;
-                    npc.transform.SetParent(GameManager.instance.npcRightPoint);
+                    thisObject.capacityNPC[i].counter = 0;
 
-                }
+                    //thisObject.capacityShop -= 1;
+                    //npc exit from shop
+                    NpcItem ni = thisObject.capacityNPC[0].npc;
+                    Npc npc = Instantiate(ni.prefabs, targetPoint[Random.Range(0, targetPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
+                    npc.roadTarget = targetPoint[Random.Range(0, targetPoint.Length)];
+                    npc.thisNpc = ni;
 
-                thisObject.capacityNPC.RemoveAt(0);
-
-                //tips system
-
-                if(thisObject.tipsChange > 0 && thisObject.tipsShop > 0)
-                {
-                    int digit = Random.Range(0, 101);
-
-                    if(digit <= thisObject.tipsChange)
+                    if (thisObject.lvlShop <= thisObject.capacityNPC.Count)
                     {
-                        GameManager.instance.GetMoney(thisObject.incomeShop * (thisObject.tipsChange / 100), "popup");
+                        thisObject.expShop[thisObject.lvlShop - 1].exp += npc.thisNpc.experienceCounter;
+                    }
+                    if(GameManager.instance.currentShopSelected)
+                    {
+                        GameManager.instance.updateExpererience();
+
                     }
 
+                    int randomDirection = Random.Range(0, 100);
+
+                    if (randomDirection > 50)
+                    {
+                        npc.walkingDirection = Vector2.right;
+                        npc.transform.localScale = new Vector2(-npc.transform.localScale.x, npc.transform.localScale.y);
+                        npc.transform.SetParent(GameManager.instance.npcLeftPoint);
+                    }
+                    else
+                    {
+                        npc.walkingDirection = Vector2.left;
+                        npc.transform.SetParent(GameManager.instance.npcRightPoint);
+
+                    }
+
+                    thisObject.capacityNPC.RemoveAt(0);
+
+                    //tips system
+
+                    if (thisObject.tipsChange > 0 && thisObject.tipsShop > 0)
+                    {
+                        int digit = Random.Range(0, 101);
+
+                        if (digit <= thisObject.tipsChange)
+                        {
+                            GameManager.instance.GetMoney(thisObject.incomeShop * (thisObject.tipsChange / 100), "popup");
+                        }
+
+                    }
+
+
+                    //get money
+                    GameManager.instance.ShopGetMoney(thisObject.incomeShop, this);
+
                 }
-
-
-                //get money
-                GameManager.instance.ShopGetMoney(thisObject.incomeShop, this);
-
             }
+
         }
 
     }

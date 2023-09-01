@@ -88,8 +88,9 @@ public class Npc : MonoBehaviour
              {
                 //goToTarget = true;
                 //stopWalking = true;
-
-                sh.thisObject.capacityNPC.Add(thisNpc);
+                CapacityItem ci = new CapacityItem();
+                ci.npc = thisNpc;
+                sh.thisObject.capacityNPC.Add(ci);
 
                 Destroy(this.gameObject);
                 insideShop = true;

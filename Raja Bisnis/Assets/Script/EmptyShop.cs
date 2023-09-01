@@ -17,25 +17,25 @@ public class EmptyShop : MonoBehaviour
 
     public void updatePrice()
     {
-        int count = 0;
+        //int count = 0;
 
-        for(int i = 0; i < RukoManager.instance.shopEmpty.Count; i++)
-        {
-            if(RukoManager.instance.shopEmpty[i].shop)
-            {
-                EmptyShop es = RukoManager.instance.shopEmpty[i].shop;
+        //for(int i = 0; i < RukoManager.instance.shopScenes.Count; i++)
+        //{
+        //    //if(RukoManager.instance.shopEmpty[i].shop)
+        //    //{
+        //    //    EmptyShop es = RukoManager.instance.shopEmpty[i].shop;
 
 
-                if (!es.lockedMenu.activeSelf)
-                {
-                    count++;
+        //    //    if (!es.lockedMenu.activeSelf)
+        //    //    {
+        //            count++;
 
-                }
-            }
+        //    //    }
+        //    //}
 
-        }
+        //}
 
-        price = CanvasManager.instance.priceShop[count];
+        price = CanvasManager.instance.priceShop[RukoManager.instance.shopBuy];
 
         if(price == 0)
         {
