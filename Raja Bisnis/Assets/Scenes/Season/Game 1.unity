@@ -569,6 +569,7 @@ MonoBehaviour:
   lvlText: {fileID: 2101137138}
   capacityText: {fileID: 249982408}
   servingTimeText: {fileID: 993807832}
+  tipsText: {fileID: 0}
   incomeText: {fileID: 34697587}
   display: {fileID: 6133558}
   experienceSlider: {fileID: 1412656635}

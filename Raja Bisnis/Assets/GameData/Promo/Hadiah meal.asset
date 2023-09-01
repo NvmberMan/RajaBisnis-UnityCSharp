@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 730fc408acc1fcd4e9d20a2078d34014, type: 3}
-  m_Name: Hadiah Boneka
+  m_Name: Hadiah meal
   m_EditorClassIdentifier: 
   description: Memanggil anak perempuan
   description2: detik lebih cepat

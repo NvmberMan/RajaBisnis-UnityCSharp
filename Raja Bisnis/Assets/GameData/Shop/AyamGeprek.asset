@@ -268,4 +268,14 @@ MonoBehaviour:
     currentLvl: 1
   - equipmentObj: {fileID: 11400000, guid: ccc6a400eb75c1941b926dc1c04bc31e, type: 2}
     currentLvl: 1
-  hasNewGame: 1
+  - equipmentObj: {fileID: 11400000, guid: e1f7914e838973f4aba9b2e2adc5e66b, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: ffe5b2fc848e394418a78ccf9959bae6, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: 48886c2e82edc3945a3f953e7d877d56, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: 2171f9bc8f4677d49992fa2c937c3714, type: 2}
+    currentLvl: 1
+  - equipmentObj: {fileID: 11400000, guid: 934a887f670e09e4f9a678c9baffef97, type: 2}
+    currentLvl: 1
+  hasNewGame: 0
