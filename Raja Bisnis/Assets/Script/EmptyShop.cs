@@ -8,10 +8,15 @@ public class EmptyShop : MonoBehaviour
 {
     public double price = 5000;
      public GameObject lockedMenu, setShopButton;
+    public Image graphic;
+    public Sprite[] saleGraphic, plainGraphic;
     [SerializeField] private TMP_Text priceText;
 
     private void Start()
     {
+
+            graphic.sprite = saleGraphic[Random.Range(0, saleGraphic.Length)];
+        
         updatePrice();
     }
 
@@ -59,6 +64,7 @@ public class EmptyShop : MonoBehaviour
         Animator anim = GetComponent<Animator>();
 
         anim.Play("UnlockEmptyShop");
+        graphic.sprite = plainGraphic[Random.Range(0, plainGraphic.Length)];
     }
 
     public void setShop()

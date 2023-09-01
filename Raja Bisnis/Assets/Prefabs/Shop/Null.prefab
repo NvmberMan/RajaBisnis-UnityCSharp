@@ -903,6 +903,11 @@ MonoBehaviour:
   price: 0
   lockedMenu: {fileID: 3160403101129792721}
   setShopButton: {fileID: 4141125781538438576}
+  graphic: {fileID: 8690080191680056931}
+  saleGraphic:
+  - {fileID: 21300000, guid: 71dbb1c7fcacfca4ea51b0bb9774db93, type: 3}
+  plainGraphic:
+  - {fileID: 21300000, guid: 984220a1dd0ba1f42ba1f4c2ce62415b, type: 3}
   priceText: {fileID: 4308749923535392518}
 --- !u!95 &4481022839076459933
 Animator:

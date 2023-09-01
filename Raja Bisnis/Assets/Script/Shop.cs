@@ -50,6 +50,7 @@ public class Shop : MonoBehaviour
                     thisObject.capacityNPC[i].counter = 0;
 
                     //thisObject.capacityShop -= 1;
+
                     //npc exit from shop
                     NpcItem ni = thisObject.capacityNPC[0].npc;
                     Npc npc = Instantiate(ni.prefabs, targetPoint[Random.Range(0, targetPoint.Length)].position, Quaternion.identity, GameManager.instance.npcLeftPoint).GetComponent<Npc>();
@@ -98,7 +99,7 @@ public class Shop : MonoBehaviour
 
 
                     //get money
-                    GameManager.instance.ShopGetMoney(thisObject.incomeShop, this);
+                    GameManager.instance.ShopGetMoney(thisObject.incomeShop, this, GameManager.instance.ckringClip);
 
                 }
             }

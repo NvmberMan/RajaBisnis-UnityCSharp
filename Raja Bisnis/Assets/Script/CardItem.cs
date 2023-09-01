@@ -55,5 +55,6 @@ public class CardItem : MonoBehaviour
     public void pilih()
     {
         CanvasManager.instance.pilihShop(shopObject);
+        GameManager.instance.spawnSoundEfx(GameManager.instance.popupClip, 1, 0.5f);
     }
 }

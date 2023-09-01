@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
     public Transform npcRightPoint;
     public List<NpcItem> npcPrefabs = new List<NpcItem>();
 
+    [Header("System Audio")]
+    public AudioClip ckringClip;
+    public AudioClip plungClip;
+    public AudioClip popupClip;
+    public GameObject soundEfxPrefab;
+
     [Header("System UI")]
     [SerializeField] private Canvas canvas;
     [SerializeField] public Canvas canvasGame;
@@ -146,11 +152,16 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void ShopGetMoney(double value, Shop shop)
+    public void ShopGetMoney(double value, Shop shop, AudioClip clip = null)
     {
         GameObject moneyEfx = Instantiate(popupMoneyEFX, popupMoneyEFX.transform.position, Quaternion.identity, shop.uiTransform);
         moneyEfx.transform.localPosition = Vector3.zero;
         moneyEfx.GetComponent<PopupEFX>().value = value;
+
+        if(clip)
+        {
+            moneyEfx.GetComponent<PopupEFX>().clip = clip;
+        }
 
         Destroy(moneyEfx, 1.2f);
 
@@ -216,6 +227,15 @@ public class GameManager : MonoBehaviour
         AlertUI a = Instantiate(alertEfx, alertContainer).GetComponent<AlertUI>();
         a.text = text;
         a.destroyDelayed = delay;
+    }
+
+    public void spawnSoundEfx(AudioClip clip, float destroy = 2, float volume = 1)
+    {
+        AudioSource soundEfx = Instantiate(soundEfxPrefab).GetComponent<AudioSource>();
+        soundEfx.clip = clip;
+        soundEfx.volume = volume;
+        soundEfx.Play();
+        Destroy(soundEfx.gameObject, destroy);
     }
 
 

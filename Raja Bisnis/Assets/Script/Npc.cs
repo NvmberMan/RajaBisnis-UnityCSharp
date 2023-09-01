@@ -91,7 +91,7 @@ public class Npc : MonoBehaviour
                 CapacityItem ci = new CapacityItem();
                 ci.npc = thisNpc;
                 sh.thisObject.capacityNPC.Add(ci);
-
+                GameManager.instance.spawnSoundEfx(GameManager.instance.plungClip, 1, 0.5f);
                 Destroy(this.gameObject);
                 insideShop = true;
             }
