@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 730fc408acc1fcd4e9d20a2078d34014, type: 3}
-  m_Name: Hadiah meal
+  m_Name: Boneka Bonekaan
   m_EditorClassIdentifier: 
   description: Memanggil anak perempuan
   description2: detik lebih cepat
-  addPercentage: 0.3
-  display: {fileID: 21300000, guid: d82af12df62b94b4d97602ce9d3c90df, type: 3}
+  addPercentage: 0.1
+  display: {fileID: 21300000, guid: 679b6817c1104df45a03e9310d8a1094, type: 3}
   npcCall:
   - {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-  maxLevel: 20
+  maxLevel: 50
   price: 200
   priceMultiplier: 1

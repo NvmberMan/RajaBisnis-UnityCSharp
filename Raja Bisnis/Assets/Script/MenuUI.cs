@@ -76,7 +76,10 @@ public class MenuUI : MonoBehaviour
             {
                 GameManager.instance.showAlert("Uang Kamu Tidak Cukup", 3);
             }
-
+            GameManager.instance.spawnSoundEfx(GameManager.instance.clickClip, 1, 0.5f);
+        }else
+        {
+            GameManager.instance.showAlert("Menu Ini Sudah Level Maximal", 2);
         }
     }
 

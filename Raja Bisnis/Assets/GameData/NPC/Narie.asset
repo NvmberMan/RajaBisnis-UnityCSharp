@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f84108e65b07f40b557b01627a8f37, type: 3}
   m_Name: Narie
   m_EditorClassIdentifier: 
-  spawnMinTime: 6
-  spawnMaxTime: 10
+  spawnMinTime: 7
+  spawnMaxTime: 17
+  experienceCounter: 15
   prefabs: {fileID: 2938902565662337974, guid: 3924bec3c2a658742a6d12f2c66d3199, type: 3}

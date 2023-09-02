@@ -17,7 +17,7 @@ MonoBehaviour:
   shopPrefab: {fileID: 9207611041396989134, guid: 586c93063e32dd14eba58d275ffd3213, type: 3}
   cardPrefab: {fileID: 6889549920762270169, guid: d6996b517359de14cacbe85d8e350457, type: 3}
   displayShop: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-  lvlShop: 13
+  lvlShop: 3
   lvl_Default: 1
   incomeShop: 1
   incomeShop_Default: 0
@@ -30,32 +30,48 @@ MonoBehaviour:
   tipsChangeDefault: 1
   servingTimeShop: 2
   capacityNPC:
+  - npc: {fileID: 0}
+    counter: 2.5402014
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 0.6686644
+    counter: 2.8802688
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 4.0062733
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 4.6086783
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 4.8073406
+    counter: 4.6484694
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 4.1382923
+    counter: 2.6902437
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 2.3215241
+    counter: 1.5762419
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 2.3092299
+    counter: 1.3258785
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 2.247109
+    counter: 4.252064
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 3.7822149
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 1.3534144
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 1.5018218
+    counter: 0.7281151
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 1.5912827
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 2.1128123
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 0.5590338
+    counter: 3.7587097
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 0.0880368
+    counter: 3.6585803
+  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
+    counter: 4.9894633
   - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 0.0675862
+    counter: 4.9894633
   expShop:
-  - exp: 0
+  - exp: 45
     max: 40
-  - exp: 0
+  - exp: 50
     max: 50
-  - exp: 0
+  - exp: 15
     max: 60
   - exp: 0
     max: 70
@@ -65,17 +81,17 @@ MonoBehaviour:
     max: 90
   - exp: 0
     max: 100
-  - exp: 120
+  - exp: 0
     max: 110
-  - exp: 130
+  - exp: 0
     max: 120
-  - exp: 130
+  - exp: 0
     max: 130
-  - exp: 150
+  - exp: 0
     max: 140
-  - exp: 160
+  - exp: 0
     max: 150
-  - exp: 55
+  - exp: 0
     max: 160
   - exp: 0
     max: 170
@@ -258,11 +274,14 @@ MonoBehaviour:
     priceMultiplier: 2
   promo:
   - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
-    currentLvl: 20
-    spawnSpeedPercentage: 1.9
+    currentLvl: 1
+    spawnSpeedPercentage: 0
   - promoObj: {fileID: 11400000, guid: c4c0fc422cffd704c9737133ae4ba6c2, type: 2}
-    currentLvl: 20
-    spawnSpeedPercentage: 5.7000003
+    currentLvl: 1
+    spawnSpeedPercentage: 0
+  - promoObj: {fileID: 11400000, guid: 47272648a1a123e4b9ce21ead65e7d23, type: 2}
+    currentLvl: 1
+    spawnSpeedPercentage: 0
   equipment:
   - equipmentObj: {fileID: 11400000, guid: 3bc2d6f979d937b4a9347b4018f18355, type: 2}
     currentLvl: 1
@@ -278,4 +297,4 @@ MonoBehaviour:
     currentLvl: 1
   - equipmentObj: {fileID: 11400000, guid: 934a887f670e09e4f9a678c9baffef97, type: 2}
     currentLvl: 1
-  hasNewGame: 0
+  hasNewGame: 1

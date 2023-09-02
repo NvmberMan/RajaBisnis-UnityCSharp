@@ -15,10 +15,9 @@ MonoBehaviour:
   description: Memanggil anak remaja
   description2: detik lebih cepat
   addPercentage: 0.1
-  display: {fileID: 21300000, guid: a23f0729a4892914b8447e25b51c23b0, type: 3}
+  display: {fileID: 21300000, guid: cfd1b056adeee7c47a0fe2aef1dc8305, type: 3}
   npcCall:
-  - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
   - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  maxLevel: 20
+  maxLevel: 50
   price: 10
   priceMultiplier: 1
