@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameEquipment: New Equipment
   description: Description of equipment
-  display: {fileID: 0}
+  display: {fileID: 21300000, guid: b93859529be8f2a49bd7bd7f8b24bb05, type: 3}
   maxLevel: 50
   tip: 0.1
   tipChange: 1

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Narie
   m_EditorClassIdentifier: 
   spawnMinTime: 7
-  spawnMaxTime: 17
+  spawnMaxTime: 15
   experienceCounter: 15
   prefabs: {fileID: 2938902565662337974, guid: 3924bec3c2a658742a6d12f2c66d3199, type: 3}

@@ -17,9 +17,9 @@ MonoBehaviour:
   shopPrefab: {fileID: 9207611041396989134, guid: 586c93063e32dd14eba58d275ffd3213, type: 3}
   cardPrefab: {fileID: 6889549920762270169, guid: d6996b517359de14cacbe85d8e350457, type: 3}
   displayShop: {fileID: 21300000, guid: 4c221bca1b16f6e428f6d3e381966bc3, type: 3}
-  lvlShop: 3
+  lvlShop: 4
   lvl_Default: 1
-  incomeShop: 1
+  incomeShop: 4
   incomeShop_Default: 0
   bankShop: 0
   bank_Default: 0
@@ -30,50 +30,16 @@ MonoBehaviour:
   tipsChangeDefault: 1
   servingTimeShop: 2
   capacityNPC:
-  - npc: {fileID: 0}
-    counter: 2.5402014
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 2.8802688
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 4.0062733
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 4.6086783
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 4.6484694
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 2.6902437
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 1.5762419
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 1.3258785
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 4.252064
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 3.7822149
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 1.3534144
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 0.7281151
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 1.5912827
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 2.1128123
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 3.7587097
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 3.6585803
-  - npc: {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-    counter: 4.9894633
-  - npc: {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
-    counter: 4.9894633
+  - npc: {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
+    counter: 2.0617054
   expShop:
-  - exp: 45
+  - exp: 210
     max: 40
-  - exp: 50
+  - exp: 170
     max: 50
-  - exp: 15
+  - exp: 120
     max: 60
-  - exp: 0
+  - exp: 60
     max: 70
   - exp: 0
     max: 80
@@ -188,7 +154,7 @@ MonoBehaviour:
   - exp: 0
     max: 240
   menu:
-  - currLevel: 1
+  - currLevel: 2
     maxLevel: 20
     name: Ayam Ge-press
     description: Masakan Siap Saji yang cukup populer di era baru ini daan cukup
@@ -196,11 +162,11 @@ MonoBehaviour:
     display: {fileID: 21300000, guid: 42c5c3ccca3831b47b7a1643c4a003cf, type: 3}
     locked: 0
     levelShopRequire: 0
-    incomeNow: 1
+    incomeNow: 4
     incomeDefault: 1
-    income: -1
+    income: 1
     incomeMultiplier: 1
-    price: 10
+    price: 6
     priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
@@ -209,12 +175,12 @@ MonoBehaviour:
       rasa baru pada konsumen '
     display: {fileID: 21300000, guid: 1e5a87de8eca0db4ab0d1884f69d7f62, type: 3}
     locked: 1
-    levelShopRequire: 10
+    levelShopRequire: 5
     incomeNow: 3
     incomeDefault: 3
     income: 0
     incomeMultiplier: 3
-    price: 300
+    price: 50
     priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
@@ -223,12 +189,12 @@ MonoBehaviour:
       sambal matah yang menjadi ciri khas
     display: {fileID: 21300000, guid: 0e7ef4218c8970544b15f52ee1572c1b, type: 3}
     locked: 1
-    levelShopRequire: 20
+    levelShopRequire: 10
     incomeNow: 3
     incomeDefault: 3
     income: 0
     incomeMultiplier: 5
-    price: 450
+    price: 65
     priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
@@ -237,12 +203,12 @@ MonoBehaviour:
       terkenal dengan lvl pedasnya
     display: {fileID: 21300000, guid: 86b3992132b8c474eaec458cff11cfbb, type: 3}
     locked: 1
-    levelShopRequire: 30
+    levelShopRequire: 15
     incomeNow: 3
     incomeDefault: 3
     income: 0
     incomeMultiplier: 7
-    price: 500
+    price: 80
     priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
@@ -251,12 +217,12 @@ MonoBehaviour:
       yang gurih gurih nyoi
     display: {fileID: 21300000, guid: 3514958545e7d8b458105266e94e48d8, type: 3}
     locked: 1
-    levelShopRequire: 40
+    levelShopRequire: 20
     incomeNow: 3
     incomeDefault: 3
     income: 0
     incomeMultiplier: 9
-    price: 650
+    price: 95
     priceMultiplier: 2
   - currLevel: 0
     maxLevel: 20
@@ -265,21 +231,21 @@ MonoBehaviour:
       Peringatan:Dapat membuat stay in toilet
     display: {fileID: 21300000, guid: ac4ce53cbdd07a345826fd8f8fda8530, type: 3}
     locked: 1
-    levelShopRequire: 50
+    levelShopRequire: 25
     incomeNow: 3
     incomeDefault: 3
     income: 0
     incomeMultiplier: 11
-    price: 700
+    price: 110
     priceMultiplier: 2
   promo:
   - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
     currentLvl: 1
     spawnSpeedPercentage: 0
-  - promoObj: {fileID: 11400000, guid: c4c0fc422cffd704c9737133ae4ba6c2, type: 2}
+  - promoObj: {fileID: 11400000, guid: 47272648a1a123e4b9ce21ead65e7d23, type: 2}
     currentLvl: 1
     spawnSpeedPercentage: 0
-  - promoObj: {fileID: 11400000, guid: 47272648a1a123e4b9ce21ead65e7d23, type: 2}
+  - promoObj: {fileID: 11400000, guid: c4c0fc422cffd704c9737133ae4ba6c2, type: 2}
     currentLvl: 1
     spawnSpeedPercentage: 0
   equipment:
