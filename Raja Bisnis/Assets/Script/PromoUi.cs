@@ -52,5 +52,7 @@ public class PromoUi : MonoBehaviour
             }
 
         }
+
+        GameManager.instance.spawnSoundEfx(GameManager.instance.clickClip, 1, 0.5f);
     }
 }

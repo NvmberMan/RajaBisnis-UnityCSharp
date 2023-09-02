@@ -19,4 +19,4 @@ MonoBehaviour:
   tip: 0.3
   tipChange: 0
   price: 20
-  priceMultiplier: 1
+  priceMultiplier: 2

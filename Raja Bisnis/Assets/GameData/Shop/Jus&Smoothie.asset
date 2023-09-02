@@ -29,8 +29,7 @@ MonoBehaviour:
   tipsChange: 0
   tipsChangeDefault: 0
   servingTimeShop: 1
-  capacityNPC:
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
+  capacityNPC: []
   expShop:
   - exp: 0
     max: 40
@@ -110,7 +109,13 @@ MonoBehaviour:
     price: 100
     priceMultiplier: 2
   promo:
-  - promoObj: {fileID: 11400000, guid: 67a60403a308b8c408d973fcb7224551, type: 2}
+  - promoObj: {fileID: 11400000, guid: 47272648a1a123e4b9ce21ead65e7d23, type: 2}
+    currentLvl: 1
+    spawnSpeedPercentage: 0
+  - promoObj: {fileID: 11400000, guid: 3fe94ef3c77c24d4cb2dac8de6fab465, type: 2}
+    currentLvl: 1
+    spawnSpeedPercentage: 0
+  - promoObj: {fileID: 11400000, guid: c4c0fc422cffd704c9737133ae4ba6c2, type: 2}
     currentLvl: 1
     spawnSpeedPercentage: 0
   equipment:
@@ -128,4 +133,4 @@ MonoBehaviour:
     currentLvl: 1
   - equipmentObj: {fileID: 11400000, guid: f3b9a499a76261d4ca908b706f82fdfd, type: 2}
     currentLvl: 1
-  hasNewGame: 0
+  hasNewGame: 1

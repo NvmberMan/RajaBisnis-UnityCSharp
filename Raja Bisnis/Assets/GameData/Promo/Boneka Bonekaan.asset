@@ -19,5 +19,5 @@ MonoBehaviour:
   npcCall:
   - {fileID: 11400000, guid: 075724dac0858cd4e84dc9abb993f629, type: 2}
   maxLevel: 50
-  price: 200
-  priceMultiplier: 1
+  price: 10
+  priceMultiplier: 5

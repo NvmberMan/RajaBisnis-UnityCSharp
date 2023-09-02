@@ -57,9 +57,21 @@ public class Shop : MonoBehaviour
                     npc.roadTarget = targetPoint[Random.Range(0, targetPoint.Length)];
                     npc.thisNpc = ni;
 
-                    if (thisObject.lvlShop <= thisObject.capacityNPC.Count)
+                    if (thisObject.lvlShop <= thisObject.expShop.Count)
                     {
                         thisObject.expShop[thisObject.lvlShop - 1].exp += npc.thisNpc.experienceCounter;
+                        int exp = thisObject.expShop[thisObject.lvlShop - 1].exp;
+                        int max = thisObject.expShop[thisObject.lvlShop - 1].max;
+                        int sisa = 0;
+
+                        if (exp >= max)
+                        {
+                            sisa = exp - max;
+                            thisObject.lvlShop += 1;
+                            thisObject.expShop[thisObject.lvlShop - 1].exp += sisa;
+
+                            NavContent.instance.updateMenu();
+                        }
                     }
                     if(GameManager.instance.currentShopSelected)
                     {

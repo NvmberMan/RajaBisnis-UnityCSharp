@@ -128,6 +128,7 @@ public class EquipmentManager : MonoBehaviour
 
                 updateEquipment(false);
                 viewEquipment(selectedEquipment);
+                GameManager.instance.updateEquipmentManager();
             }else
             {
                 GameManager.instance.showAlert("Uang Kamu Tidak Cukup", 3);

@@ -17,6 +17,6 @@ MonoBehaviour:
   display: {fileID: 21300000, guid: 276ebf0dfc3849d4f97c9f2db4c8ed37, type: 3}
   maxLevel: 50
   tip: 0.1
-  tipChange: 1
+  tipChange: 0.2
   price: 10
   priceMultiplier: 1

@@ -13,5 +13,7 @@ public class EquipmentUI : MonoBehaviour
     public void clickThis()
     {
         EquipmentManager.instance.viewEquipment(thisEquipment);
+
+        GameManager.instance.spawnSoundEfx(GameManager.instance.clickClip, 1, 0.5f);
     }
 }

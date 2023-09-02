@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Description of equipment
   display: {fileID: 21300000, guid: 0117fa57d64956346ab5d4de80d48a86, type: 3}
   maxLevel: 50
-  tip: 0.1
-  tipChange: 1
+  tip: 0.05
+  tipChange: 0.2
   price: 3
   priceMultiplier: 1

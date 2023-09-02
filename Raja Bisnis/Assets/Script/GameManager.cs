@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text servingTimeText;
     [SerializeField] private TMP_Text tipsText;
     [SerializeField] private TMP_Text incomeText;
+    [SerializeField] private TMP_Text expText;
 
     [Space(10)]
     [SerializeField] private Image display;
@@ -190,9 +191,15 @@ public class GameManager : MonoBehaviour
             //servingTimeText.text = currentShopSelected.servingTimeShop.ToString("F1") + " ms";
             incomeText.text = SFNuffix.GetShortValue(currentShopSelected.incomeShop, 1) + " / Perorang";
 
+            updateEquipmentManager();
             updateExpererience();
         }
 
+    }
+
+    public void updateEquipmentManager()
+    {
+        tipsText.text = currentShopSelected.tipsShop + "% Penghasilan" + "  |  " + currentShopSelected.tipsChange + "% Probabilitas";
     }
 
     public void updateExpererience()
@@ -201,21 +208,14 @@ public class GameManager : MonoBehaviour
         {
             int max = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].max;
             int exp = currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp;
-            int sisa = 0;
-
-            if (exp >= max)
-            {
-                sisa = exp - max;
-                currentShopSelected.lvlShop += 1;
-                currentShopSelected.expShop[currentShopSelected.lvlShop - 1].exp += sisa;
-
-                NavContent.instance.updateMenu();
-            }
+ 
 
             experienceSlider.maxValue = max;
             experienceSlider.value = exp;
 
-            lvlText.text = "Lvl." + currentShopSelected.lvlShop.ToString();
+            lvlText.text = "Level " + currentShopSelected.lvlShop.ToString();
+
+            expText.text = exp + "/" + max;
         }
 
 
