@@ -11,6 +11,7 @@ public class CanvasManager : MonoBehaviour
 
     public double[] priceShop = { 0 };
 
+    public DialogSystem tutorialDialog;
     public GameObject shopContainer;
     public GameObject selectionContainer;
     public GameObject selectionPrefab;
@@ -104,6 +105,11 @@ public class CanvasManager : MonoBehaviour
         selection.shopObject = so;
 
         closeSetShop();
+        NextTutorial(true);
+    }
 
+    public void NextTutorial(bool skip)
+    {
+        tutorialDialog.NextLine(skip);
     }
 }

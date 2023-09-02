@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public AudioClip ckringClip;
     public AudioClip plungClip;
     public AudioClip popupClip;
+    public AudioClip clickClip;
     public GameObject soundEfxPrefab;
 
     [Header("System UI")]
@@ -187,7 +188,7 @@ public class GameManager : MonoBehaviour
 
             display.sprite = currentShopSelected.displayShop;
             //servingTimeText.text = currentShopSelected.servingTimeShop.ToString("F1") + " ms";
-            incomeText.text = SFNuffix.GetShortValue(currentShopSelected.incomeShop, 1) + " / Hari";
+            incomeText.text = SFNuffix.GetShortValue(currentShopSelected.incomeShop, 1) + " / Perorang";
 
             updateExpererience();
         }
