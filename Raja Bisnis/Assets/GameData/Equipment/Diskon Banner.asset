@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1078d137f4cfa5b469da964900a9cb31, type: 3}
-  m_Name: Self Food
+  m_Name: Diskon Banner
   m_EditorClassIdentifier: 
-  nameEquipment: New Equipment
+  nameEquipment: etalase
   description: Description of equipment
-  display: {fileID: 21300000, guid: 6c142a54b913d6f45b7b34f4d2ac8273, type: 3}
+  display: {fileID: 21300000, guid: f0e575196a6a02a44bc4262954ac82de, type: 3}
   maxLevel: 50
-  tip: 0.1
-  tipChange: 1
-  price: 10
-  priceMultiplier: 1
+  tip: 0.3
+  tipChange: 0
+  price: 20
+  priceMultiplier: 2

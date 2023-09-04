@@ -29,11 +29,10 @@ MonoBehaviour:
   tipsChange: 0
   tipsChangeDefault: 0
   servingTimeShop: 1
-  capacityNPC:
-  - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
+  capacityNPC: []
   expShop:
   - exp: 0
-    max: 40
+    max: 1000000
   - exp: 0
     max: 50
   - exp: 0
@@ -137,4 +136,4 @@ MonoBehaviour:
     currentLvl: 1
   - equipmentObj: {fileID: 11400000, guid: d0719bdd1877a5c4788f64314dd18342, type: 2}
     currentLvl: 1
-  hasNewGame: 0
+  hasNewGame: 1

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1078d137f4cfa5b469da964900a9cb31, type: 3}
-  m_Name: Menu Board
+  m_Name: Kursi & Meja
   m_EditorClassIdentifier: 
-  nameEquipment: etalase
+  nameEquipment: Etalase
   description: Description of equipment
-  display: {fileID: 21300000, guid: b1a6f35276e5c6a478710f102b2b3932, type: 3}
+  display: {fileID: 21300000, guid: 276ebf0dfc3849d4f97c9f2db4c8ed37, type: 3}
   maxLevel: 50
-  tip: 0.3
-  tipChange: 0
-  price: 20
-  priceMultiplier: 2
+  tip: 0.1
+  tipChange: 0.2
+  price: 10
+  priceMultiplier: 1

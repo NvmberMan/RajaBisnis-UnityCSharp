@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Memanggil anak remaja
   description2: detik lebih cepat
-  addPercentage: 0.1
+  addPercentage: 0.2
   display: {fileID: 21300000, guid: cfd1b056adeee7c47a0fe2aef1dc8305, type: 3}
   npcCall:
   - {fileID: 11400000, guid: 744c679d7f8bb97469546c4e09a388ff, type: 2}
-  maxLevel: 50
+  maxLevel: 30
   price: 10
   priceMultiplier: 1

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1078d137f4cfa5b469da964900a9cb31, type: 3}
-  m_Name: Dumpster
+  m_Name: Tanaman
   m_EditorClassIdentifier: 
   nameEquipment: New Equipment
   description: Description of equipment
-  display: {fileID: 0}
+  display: {fileID: 21300000, guid: db02b1e7a45ccb848b9fa7f009c525fd, type: 3}
   maxLevel: 50
-  tip: 0.05
-  tipChange: 0.2
-  price: 10
-  priceMultiplier: 1
+  tip: 0.2
+  tipChange: 0.3
+  price: 7
+  priceMultiplier: 2

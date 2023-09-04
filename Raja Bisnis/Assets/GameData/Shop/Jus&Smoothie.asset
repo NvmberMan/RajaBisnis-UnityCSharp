@@ -37,6 +37,10 @@ MonoBehaviour:
     max: 50
   - exp: 0
     max: 60
+  - exp: 0
+    max: 60
+  - exp: 0
+    max: 10000000
   menu:
   - currLevel: 1
     maxLevel: 20

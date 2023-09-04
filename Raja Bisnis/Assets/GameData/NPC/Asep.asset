@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnMinTime: 60
   spawnMaxTime: 140
-  experienceCounter: 15
+  experienceCounter: 13
   prefabs: {fileID: 2938902565662337974, guid: 2b93995d9ce15e94ba737bca1825d2f1, type: 3}

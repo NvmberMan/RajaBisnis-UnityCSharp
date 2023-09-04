@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Memanggil Asep
   description2: detik lebih cepat
-  addPercentage: 0.1
+  addPercentage: 0.5
   display: {fileID: 21300000, guid: 9d95bc308b7e0a243b58955187e5bc3d, type: 3}
   npcCall:
   - {fileID: 11400000, guid: d2f4539e028b74e4791ed360d4164ede, type: 2}
-  maxLevel: 50
+  maxLevel: 30
   price: 20
-  priceMultiplier: 1
+  priceMultiplier: 2
