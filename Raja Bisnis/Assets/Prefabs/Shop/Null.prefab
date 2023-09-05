@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_Color: {r: 0.40000004, g: 0.40000004, b: 0.40000004, a: 1}
+  m_Color: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71dbb1c7fcacfca4ea51b0bb9774db93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e6bf25f0971b1d45816817b8dd07b79, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -905,9 +905,9 @@ MonoBehaviour:
   setShopButton: {fileID: 4141125781538438576}
   graphic: {fileID: 8690080191680056931}
   saleGraphic:
-  - {fileID: 21300000, guid: 71dbb1c7fcacfca4ea51b0bb9774db93, type: 3}
+  - {fileID: 21300000, guid: 1e6bf25f0971b1d45816817b8dd07b79, type: 3}
   plainGraphic:
-  - {fileID: 21300000, guid: 984220a1dd0ba1f42ba1f4c2ce62415b, type: 3}
+  - {fileID: 21300000, guid: a4d5fb4a612eb514ab219dc08c1b5106, type: 3}
   priceText: {fileID: 4308749923535392518}
 --- !u!95 &4481022839076459933
 Animator:
