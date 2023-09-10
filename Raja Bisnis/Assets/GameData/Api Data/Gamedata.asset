@@ -12,11 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3648e5a1ab3a04f40b55919fb48af787, type: 3}
   m_Name: Gamedata
   m_EditorClassIdentifier: 
+  versionId: 0
+  versionName: tes
   Shop:
   - _name: Ayam Geprek
     _id: b0921701-4cd7-4c8c-8e62-a8a28a345297
     _description: tes
-    _menu: []
+    _menu:
+    - _name: ayyam geprek
+      _id: 22efdf78-b93e-4814-9dfd-bd8869b719c6
+      _description: 
+      _menu_sprite: {fileID: 0}
+      _level_Max: 20
+      _price: 50
+      _price_multiplier: 1
+      _price_unlock: 0
+      _id_Shop: b0921701-4cd7-4c8c-8e62-a8a28a345297
+    - _name: ayyam geprek
+      _id: b01ac432-65a7-489a-99c7-2d81c4541e24
+      _description: 
+      _menu_sprite: {fileID: 0}
+      _level_Max: 20
+      _price: 50
+      _price_multiplier: 1
+      _price_unlock: 0
+      _id_Shop: b0921701-4cd7-4c8c-8e62-a8a28a345297
   - _name: Toko Jus
     _id: f03d2c19-9654-44f0-919f-19d614ff7500
     _description: Jus jus jus
