@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3648e5a1ab3a04f40b55919fb48af787, type: 3}
+  m_Name: Gamedata
+  m_EditorClassIdentifier: 
+  Shop:
+  - _name: Ayam Geprek
+    _id: b0921701-4cd7-4c8c-8e62-a8a28a345297
+    _description: tes
+    _menu: []
+  - _name: Toko Jus
+    _id: f03d2c19-9654-44f0-919f-19d614ff7500
+    _description: Jus jus jus
+    _menu: []
