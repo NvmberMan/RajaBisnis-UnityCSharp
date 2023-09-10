@@ -105,7 +105,7 @@ public class CanvasManager : MonoBehaviour
         selection.shopObject = so;
 
         closeSetShop();
-        NextTutorial(true);
+        //NextTutorial(true);
     }
 
     public void NextTutorial(bool skip)

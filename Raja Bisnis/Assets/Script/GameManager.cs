@@ -65,6 +65,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image display;
     [SerializeField] private Slider experienceSlider;
 
+    [Space(10)]
+    public GameData GAMEDATA;
+
 
     private void Start()
     {
