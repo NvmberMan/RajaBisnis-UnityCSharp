@@ -14,30 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   versionId: 0
   versionName: tes
+  datajson: '{"data":[{"IdShop":"b0921701-4cd7-4c8c-8e62-a8a28a345297","name":"Ayam
+    Geprek","description":"tes","price":10,"prefab_path":"Prefab/Menu/","shop_display":"ayamgepress.png","banner_display":"bannerdefault.png","menu":[{"id":"22efdf78-b93e-4814-9dfd-bd8869b719c6","name":"Ayam
+    Ge-press","description":"Masakan Siap Saji yang cukup populer di era baru ini
+    daan cukup terkenal di banyak kalangan","level_max":20,"price":6,"price_multiplier":2,"price_unlock":0,"income":-1,"income_multiplier":1,"menu_display":"menu_1_ayamgepress.png","shopId":"b0921701-4cd7-4c8c-8e62-a8a28a345297"},{"id":"b01ac432-65a7-489a-99c7-2d81c4541e24","name":"Ayam
+    Ge-Press Telur Asin","description":"Ayam Ge-Press yang ditambahkan sambal telur
+    asin yang dapat memunculkan rasa baru pada konsumen ","level_max":20,"price":35,"price_multiplier":2,"price_unlock":0,"income":0,"income_multiplier":2,"menu_display":"menu_2_ayamgepress.png","shopId":"b0921701-4cd7-4c8c-8e62-a8a28a345297"}]},{"IdShop":"f03d2c19-9654-44f0-919f-19d614ff7500","name":"Toko
+    Jus","description":"Jus jus jus","price":10,"prefab_path":"Prefab/Menu/","shop_display":"jussmoothie.png","banner_display":"bannerdefault.png","menu":[]}]}'
   Shop:
   - _name: Ayam Geprek
     _id: b0921701-4cd7-4c8c-8e62-a8a28a345297
     _description: tes
+    _shop_sprite: {fileID: 21300000, guid: a2beea397d4d57148a4ab5d953da948b, type: 3}
     _menu:
-    - _name: ayyam geprek
+    - _name: Ayam Ge-press
       _id: 22efdf78-b93e-4814-9dfd-bd8869b719c6
-      _description: 
-      _menu_sprite: {fileID: 0}
+      _description: Masakan Siap Saji yang cukup populer di era baru ini daan cukup
+        terkenal di banyak kalangan
+      _menu_sprite: {fileID: 21300000, guid: a2beea397d4d57148a4ab5d953da948b, type: 3}
       _level_Max: 20
-      _price: 50
-      _price_multiplier: 1
+      _price: 6
+      _price_multiplier: 2
       _price_unlock: 0
+      _income: -1
+      _income_multiplier: 1
       _id_Shop: b0921701-4cd7-4c8c-8e62-a8a28a345297
-    - _name: ayyam geprek
+    - _name: Ayam Ge-Press Telur Asin
       _id: b01ac432-65a7-489a-99c7-2d81c4541e24
-      _description: 
-      _menu_sprite: {fileID: 0}
+      _description: 'Ayam Ge-Press yang ditambahkan sambal telur asin yang dapat
+        memunculkan rasa baru pada konsumen '
+      _menu_sprite: {fileID: 21300000, guid: a2beea397d4d57148a4ab5d953da948b, type: 3}
       _level_Max: 20
-      _price: 50
-      _price_multiplier: 1
+      _price: 35
+      _price_multiplier: 2
       _price_unlock: 0
+      _income: 0
+      _income_multiplier: 2
       _id_Shop: b0921701-4cd7-4c8c-8e62-a8a28a345297
   - _name: Toko Jus
     _id: f03d2c19-9654-44f0-919f-19d614ff7500
     _description: Jus jus jus
+    _shop_sprite: {fileID: 21300000, guid: 370e92a325b887f45bcdac81d28c2a47, type: 3}
     _menu: []
